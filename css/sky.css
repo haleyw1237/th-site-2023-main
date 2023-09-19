@@ -2,7 +2,7 @@
     background-image: linear-gradient(#151718, var(--light-blue));
     overflow:hidden;
     z-index: 5;
-    width: calc(100vw + 2500px);
+    width: calc(100vw + 10px);
 }
 
 .plane-container {
@@ -36,7 +36,7 @@
     z-index: 200;
     font-family: "Cloud", sans-serif;
     color: white;
-    letter-spacing: 8px; 
+    letter-spacing: 8px;
 }
 
 #main-logo {
@@ -86,7 +86,7 @@
 
 .clouds-container .sm {width: 80px;}
 .clouds-container .md {width: 200px;}
-.clouds-container .lg {width: 350px;} 
+.clouds-container .lg {width: 350px;}
 
 
 .clouds-container img {
@@ -127,7 +127,7 @@
     transform: translate(-4px, 0px) rotate(2deg)
   }
   75%{
-    transform: translate(-5px, 10px) 
+    transform: translate(-5px, 10px)
   }
   100%{
     transform: translate(0, 0) rotate(-1deg)
@@ -267,6 +267,6 @@
     top: 58vh;
   }
 
-  
+
 }
 
