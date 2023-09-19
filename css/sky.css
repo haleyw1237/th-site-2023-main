@@ -1,0 +1,272 @@
+.sky {
+    background-image: linear-gradient(#151718, var(--light-blue));
+    overflow:hidden;
+    z-index: 5;
+    width: calc(100vw + 2500px);
+}
+
+.plane-container {
+    position: fixed;
+    z-index: 6;
+    left: -40%;
+    transition: left 1.5s ease;
+}
+
+.plane img {
+  height: 400px;
+  transform: scaleX(-1);
+}
+
+.clouds-container {
+    position: absolute;
+    z-index: 4;
+}
+
+.cloud {
+    position: absolute;
+    opacity: 0.7;
+}
+
+.title-cloud {
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    width: 100vw;
+    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    z-index: 200;
+    font-family: "Cloud", sans-serif;
+    color: white;
+    letter-spacing: 8px; 
+}
+
+#main-logo {
+  height: 50vh;
+  -webkit-filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+
+}
+
+.title-cloud h2 {
+    font-size: 100px;
+}
+
+.title-cloud p {
+    font-size: 45px;
+}
+
+.title-cloud .uni {
+  font-size: 55px;
+}
+
+.title-cloud .small-title, .small-title {
+    font-size: 20px;
+}
+
+
+/* .sm1{top: 25vh; left: 1537px;}
+.sm2{top: 10vh; left: 2100px;}
+.sm3{top: 40vh; left: 94px;}
+.sm4{top: 78vh; left: 1794px;}
+.sm5{top: 10vh; left: 1193px;}
+.sm6{top: 96vh; left: 403px;}
+.sm7{top: 70vh; left: 932px;}
+
+.md1{top: 20vh; left: 1400px;}
+.md2{top: 15vh; left: 650px;}
+.md3{top: 60vh; left: 900px;}
+.md4{top: 75vh; left: 100px;}
+.md5{top: 92vh; left: 1700px;}
+.md6{top: 10vh; left: 2200px;}
+.md7{top: 70vh; left: 2400px;}
+
+.lg1{top: 10vh; left: 3500px}
+.lg2{top: 40vh; left: 2400px}
+.lg3{top: 45vh; left: 1350px}
+.lg4{top: 20vh; left: 950px;} */
+
+.clouds-container .sm {width: 80px;}
+.clouds-container .md {width: 200px;}
+.clouds-container .lg {width: 350px;} 
+
+
+.clouds-container img {
+    position: relative;
+}
+
+.faq-section {
+    position: absolute;
+    left: 100vw;
+    width: calc(6000px - 100vw);
+    height: 100%;
+}
+
+.faq-title {
+  font-family: "Cloud", sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  left: 30px;
+  display: inline-block;
+  width: 500px;
+  font-size: 2.5rem;
+  color: rgb(245, 239, 245);
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+@keyframes sway {
+  0%{
+    transform: translate(0, 0) rotate(-1deg)
+  }
+  25%{
+    transform: translate(15px, 8px)
+  }
+  50%{
+    transform: translate(-4px, 0px) rotate(2deg)
+  }
+  75%{
+    transform: translate(-5px, 10px) 
+  }
+  100%{
+    transform: translate(0, 0) rotate(-1deg)
+  }
+}
+
+.faq:hover {
+  filter: drop-shadow(6px 6px 10px rgba(0,0,0,0.5));
+}
+
+.faq {
+  position: absolute;
+  width: 300px;
+  z-index: 5;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  height: auto;
+  transform: translate(0, 0) rotate(-1deg);
+  display: flex;
+}
+
+.cloud-faq {
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.faq .question {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  text-shadow: 0 0 10px black;
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 100px;
+  padding: 5px;
+  display: inline-block;
+}
+
+.faq .answer {
+    background-image: linear-gradient(to right, #ffe8bb, var(--yellow));
+    border: 2px solid white;
+    font-size: 15px;
+    width: 220px;
+    font-family: "Inter", sans-serif;
+    position:absolute;
+    left: 255px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 15px;
+    display: none;
+}
+
+.faq .answer a {
+    font-family:'Inter', sans-serif;
+    text-decoration: underline;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+/* #q4{left: 800px; top: 5vh; animation-delay: 1.1s}
+#q7{left: 1780px; top: 4vh; animation-delay: 2.6s}
+#q3 {left: 1300px; top: 3vh; animation-delay: 1.2s}
+#q1 {left: 550px; top: 30vh; animation-delay: 0.8s}
+#q5 {left: 1050px; top: 34vh; animation-delay: 3.5s}
+#q6 {left: 1450px; top: 29vh; animation-delay: 1s}
+#q2 {left: 750px; top: 58vh; animation-delay: 1.7s}
+#q8 {left: 1280px; top: 66vh; animation-delay: 2.4s}
+#q9 {left: 1800px; top: 61vh; animation-delay: 3.9s} */
+/* shrink the title if at a specific width */
+@media only screen and (max-width: 870px){
+    .title-cloud h2 {
+        font-size: 10vw;
+    }
+    .title-cloud p {
+        font-size: 5vw;
+    }
+    .title-cloud .uni {
+      font-size: 6vw;
+    }
+    .title-cloud .small-title {
+      font-size: 2.5vw;
+    }
+    #main-logo {
+      height: 30vh;
+    }
+    .faq-title {
+      font-size: 4vw;
+    }
+    .faq-section .small-title {
+      font-size: 3vw;
+    }
+}
+
+@media screen and (max-width: 750px){
+  .plane img {
+    height: 250px;
+    position: relative;
+  }
+}
+
+@media screen and (max-height: 750px), (max-width: 750px){
+  .faq {
+    width: 200px;
+  }
+  .faq .question {
+    font-size: 12px;
+    top: 40px;
+  }
+  .faq .answer {
+    padding: 5px 10px;
+    border-radius: 10px;
+    left: 180px;
+    font-size: 10px;
+    width: 170px;
+    top: 40%;
+  }
+  #q7 {
+    top: 14vh;
+  }
+}
+
+@media screen and (max-height: 530px){
+  #q8 {
+    top: 60vh;
+  }
+
+  #q9 {
+    top: 58vh;
+  }
+
+  
+}
+

@@ -1,0 +1,335 @@
+.night {
+    background-image: linear-gradient(#b1123a, var(--dark-blue));
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    width: 7000px;
+}
+
+.train-container {
+  position: fixed;
+  height: 400px;
+  width: 400px;
+  bottom: 40px;
+  left: -40%;
+  transition: left 1.5s ease;
+  transform: scaleX(-1);
+  z-index: 4;
+  filter: sepia(20%);
+}
+
+.train {
+    height: 400px;
+    width: 400px;
+}
+
+.train-wheel {
+  height: 84px;
+  position: absolute;
+}
+
+#wheel1 {
+  bottom: 15px;
+  left: 140px;
+}
+#wheel2 {
+  bottom: 15px;
+  left: 224px;
+}
+
+.buildings-container {
+  /* background-image: url("../assets/buildings.png"); */
+  height: 220px;
+  position: fixed;
+  bottom: 215px;
+  width: 5440px;
+  background-repeat: repeat-x;
+  z-index: 2;
+  
+}
+
+.train-tracks {
+  background-image: url("../assets/trainTracks.png");
+  z-index: 3;
+  height: 650px;
+  position: absolute;
+  bottom: -130px;
+  width: 100%;
+  background-repeat: repeat-x;
+}
+
+#stars {
+  position: fixed;
+  z-index: 0;
+  height: 100vh;
+}
+
+.sched-container {
+  position: absolute;
+  top: 3vh;
+  left: 50px;
+  color: white;
+  font-family: 'Eurostile', sans-serif;
+  display: flex;
+}
+
+
+#sched-title, #prize-title {
+  text-orientation:upright;
+  writing-mode: vertical-lr;
+  font-size: 5vh;
+  margin-right: 100px;
+  background-color: var(--red);
+}
+
+.sched-row {
+  display: flex;
+  margin-bottom: 5vh;
+}
+
+.sched-row > * {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
+  border-top: 1px solid rgb(86, 86, 86);
+  padding: 10px;
+}
+
+.sched-date {
+  width: 250px;
+  text-align: center;
+}
+
+.sched-date h3 {
+  font-size: 2.5rem;
+}
+
+.sched-date p {
+  font-size: 1.5rem;
+}
+
+
+.sched-event h4 {
+  font-size: 1.2rem;
+}
+
+.sched-event {
+  font-family: 'Inter', sans-serif;
+  display: table;
+  margin-left: 20px;
+  padding: 0 10px;
+  max-width: 296px;
+}
+.sched-event p {
+  font-size: 0.8rem;
+}
+
+.event-info {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bold {
+  font-family: 'EurostileBold', sans-serif;
+}
+
+.sunday, .friday {
+  color: var(--yellow);
+}
+
+.side-hacks {
+  left: 5950px;
+}
+
+.mlh-categories {
+  left: 6450px;
+}
+
+.modal-open {
+  position: absolute; 
+  background-color: rgba(255, 255, 255, 0.1); 
+  top: 5vh;
+  z-index: 0;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.1); 
+}
+
+.modal-open h3 {
+  font-family: 'EurostileBold', sans-serif; 
+  font-size: 35px; 
+}
+
+.modal-open .buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  gap: 15px;
+}
+
+.modal-open button {
+  width: 210px;
+  margin: 0 auto; 
+  padding: 15px;
+  background-color: var(--light-blue);
+  border: 2px solid var(--dark-blue); 
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidehack-btn:hover {
+  color: white;
+  border: 2px solid white;
+  background-color: var(--blue);
+}
+
+.prizes-container {
+  position: absolute;
+  left: 2850px;
+  top: 5vh;
+  display: flex;
+  height: 260px;
+}
+
+#prize-title {
+  color: white;
+  font-size: 6vh;
+}
+
+.category {
+  margin-right: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  border-radius: 10px;
+}
+
+.category .title {
+  background-color: white;
+  display: inline;
+  position: absolute;
+  border-radius: 5px;
+  padding: 7px;
+  letter-spacing: 2px;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.places {
+  display: flex;
+  position: relative;
+}
+.places > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+.prize-info {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 40px;
+  
+}
+
+.prize-info img {
+  width: 100%;
+}
+
+.raffle {
+  background-color: rgba(167, 45, 41, 0.5);
+  box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.1); 
+  padding: 20px;
+  font-size: 18px;
+  font-family: 'Inter', sans-serif; 
+  border-radius: 10px; 
+  text-align: center;
+  color: white;
+}
+
+.raffle h3 {
+  font-family: 'EurostileBold', sans-serif; 
+  text-transform: uppercase; 
+  font-size: 30px; 
+}
+
+.raffle ul {
+  list-style: none; 
+}
+
+.raffle li {
+  margin-top: 13px; 
+}
+
+@media screen and (max-height: 930px) {
+  .sched-row {
+    margin-bottom: 2vh;
+  }
+  #sched-title {
+    font-size: 2.3em;
+  }
+  
+}
+
+@media screen and (max-height: 780px){
+  .sched-container {
+    transform: scale(0.8);
+    top: 0;
+    left: 50px;
+  }
+  #sched-title {
+    font-size: 2rem;
+  }
+  .sched-row {
+    margin-bottom: 5px;
+  }
+  .train-container {
+    bottom: 5px;
+  }
+  .buildings-container {
+    bottom: 175px;
+  }
+  .train-tracks {
+    bottom: -170px;
+  }
+  .buildings-container img {
+    height: 100px;
+  }
+  .buildings-container {
+    bottom: 59px;
+  }
+}
+
+@media screen and (max-width: 750px){
+  .train {
+    width: 100%;
+    height: 100%;
+  }
+  .train-container {
+    width: 250px;
+    height: 250px;
+  }
+  .train-wheel {
+    height: 52px;
+  }
+  #wheel1 {
+    left:85px;
+    bottom: 10px;
+  }
+  #wheel2 {
+    left: 140px;
+    bottom: 10px;
+  }
+  
+}

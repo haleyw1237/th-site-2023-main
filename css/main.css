@@ -1,0 +1,227 @@
+
+
+/* import all the fonts */
+@font-face {
+    font-family: "Eurostile";
+    src: url("../assets/eurostile/EuroStyle\ Normal.ttf")
+}
+@font-face {
+    font-family: "EurostileBold";
+    src: url("../assets/eurostile/EurostileBold.ttf")
+}
+@font-face {
+    font-family: "EurostileOblique";
+    src: url("../assets/eurostile/EurostileOblique.ttf")
+}
+@font-face {
+    font-family: "Cloud";
+    src: url("../assets/DCC\ -\ Cloud.otf")
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.discord {
+  background-color: var(--red);
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 25px;
+  font-family: 'EurostileBold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.discord:hover {
+  background-color: #b3302b
+}
+
+#modal {
+  position: fixed;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  padding: 5px; 
+  display: none;
+  justify-content: center;
+  align-items: center; 
+  font-family: 'Inter', sans-serif;
+}
+
+#modal-content {
+  background-color: var(--yellow);
+  position: relative; 
+  padding: 35px 15px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+  border-radius: 25px;
+}
+
+#modal-title {
+  text-align: center;
+}
+
+#modal .x {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#modal-image {
+  height: auto;
+  width: 80px;
+  margin: 0 auto;
+}
+
+#modal .x:focus {
+  transform: scale(1.1);
+  text-shadow: 3px 3px 5px black; 
+}
+
+#hackathon {
+  position: fixed;
+  right: 40px;
+  z-index: 8;
+  height: 200px;
+  
+}
+
+#planePng {
+  display: none;
+}
+
+.divider-text {  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: 'EurostileBold', sans-serif;
+  text-orientation:upright;
+  writing-mode: vertical-lr;
+  color: var(--dark-blue);
+  text-shadow: 3px 3px 0 var(--red);
+}
+
+.divider .smaller {
+  font-size: 2.5rem;
+}
+
+#canvas {
+    width: 25450px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#page {
+    height: 18000px;
+    top: 0;
+    left: 0;
+}
+
+.vertical-section {
+    position: relative;
+    height: 100%;
+    width: 6000px;
+}
+
+.divider {
+    height: 100%;
+    background-image: linear-gradient(to right, #dbac4d, var(--yellow), #dbac4d);
+    position: relative;
+    width: 150px;
+    z-index: 10;
+    display: table;
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
+}
+
+.container {
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+
+.fixed-info {
+    position: fixed;
+    z-index: 99;
+    bottom: 20px;
+    right: 10px;
+    text-align: center;
+}
+
+.register-btn {
+  font-size: 3rem;
+}
+
+.register-input-error{
+    border: 2px solid #DB3A34;
+}
+
+.scroll-banner {
+    padding: 10px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    position: relative;
+    z-index: 0;
+}
+
+.scroll-banner p {
+    width: 80px;
+    font-size: 14px;
+    margin: 0 auto;
+    color: white;
+    font-family: 'EurostileBold', sans-serif;
+}
+
+#mouse-icon {
+    font-size: 60px;
+    color: white;
+    padding-top: 5px;
+}
+#theme-song-icon{
+    font-size: 60px;
+    color: white;
+    padding-top: 5px;    
+}
+#scroll-icon {
+    font-size: 3rem;
+
+}
+ /* at if it goes below 650 width, or 680 height, flip to alternate version.*/
+
+ @media screen and (max-width: 750px){
+  #hackathon {
+    right: 20px;
+    height: 130px;
+  }
+  #mouse-icon {
+    font-size: 30px;
+  }
+  #theme-song-icon{
+    font-size: 30px;
+  }
+  .scroll-banner {
+    padding: 0;
+  }
+ }

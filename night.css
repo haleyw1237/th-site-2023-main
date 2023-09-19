@@ -1,0 +1,14 @@
+.night {
+    background-color: var(--dark-blue);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.train {
+    height: 200px;
+    position: fixed;
+    bottom: 15%;
+    left: -40%;
+    z-index: 3;
+}

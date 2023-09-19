@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/json" src="schools.json"></script>
+    <link rel="icon" type="image/png" href="assets/tiger.png">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sky.css" />
+    <link rel="stylesheet" href="css/night.css" />
+    <link rel="stylesheet" href="css/ocean.css" />
+    <link rel="stylesheet" href="css/register.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+
+    <title>TigerHacks</title>
+  </head>
+  <body>
+    
+    <div id="page"></div>
+    <div id="canvas">
+      <img id="hackathon" src="assets/mlh.svg" alt="Major League Hacking 2022 Hackathon Season">
+      <div class="container">
+        
+        <div class="vertical-section sky">
+          <div class="title-cloud">
+            <img id="main-logo" src="assets/tigerhackslogo.png" alt="tigerhacks logo">
+            <h2 class="cloud-text">TigerHacks 2022</h2>
+            <p class="cloud-text uni">University of Missouri</p>
+            <p class="cloud-text">November 4-6, 2022</p>
+            <p class="small-title">scroll up or down to navigate!</p>
+          </div>
+
+
+          <!-- Frequently Asked Questions -->
+          <div class="faq-section">
+            <div class="faq-title">
+              <h2>Frequently Asked Questions</h2>
+              <p class="small-title">Click to reveal answers!</p>
+            </div>
+            <div class="faq" id="q1">
+              <img class="cloud-faq" src="assets/balloon1.png" alt="FAQ cloud" />
+              <p class="question">What happens at a hackathon?</p>
+              <p class="answer">
+                Participants (hackers) spend 36 hours working in small teams to
+                design and build projects they're excited about. You bring your
+                ideas and we give you everything you need to make them come to
+                life, including workshops, mentors, food, and swag!
+              </p>
+            </div>
+            <div class="faq" id="q2">
+              <img class="cloud-faq" src="assets/balloon2.png" alt="FAQ cloud" />
+              <p class="question">How many people are on a team?</p>
+              <p class="answer">Teams can range from 1 - 4 individuals.</p>
+            </div>
+            <div class="faq" id="q3">
+              <img class="cloud-faq" src="assets/balloon3.png" alt="FAQ cloud" />
+              <p class="question">What do teams usually make?</p>
+              <p class="answer">
+                A wide variety of things! Web/mobile applications, AI/ML, AR/VR,
+                games, even hardware. Whatever interests you most is likely to
+                yield the best results!
+              </p>
+            </div>
+            <div class="faq" id="q4">
+              <img class="cloud-faq" src="assets/balloon4.png" alt="FAQ cloud" />
+              <p class="question">Do I have to know how to code to attend?</p>
+              <p class="answer">
+                Nope! We will provide resources including workshops and a
+                mentorship system to help beginners get started. Additionally,
+                one room will be dedicated to new hackers with several beginner
+                project ideas.
+              </p>
+            </div>
+            <div class="faq" id="q5">
+              <img class="cloud-faq" src="assets/balloon5.png" alt="FAQ cloud" />
+              <p class="question">Who runs TigerHacks?</p>
+              <p class="answer">
+                TigerHacks is organized and hosted by a group of dedicated and
+                passionate young nerds, who are members of the Mizzou Computing
+                Association (MCA) at the University of Missouri.
+              </p>
+            </div>
+            <div class="faq" id="q6">
+              <img class="cloud-faq" src="assets/balloon6.png" alt="FAQ cloud" />
+              <p class="question">Where do I register my team?</p>
+              <p class="answer">
+                You can register using
+                <a href="https://th22.devpost.com/">this link</a>, starting on
+                November 4th at 5PM.
+              </p>
+            </div>
+            <div class="faq" id="q7">
+              <img class="cloud-faq" src="assets/balloon7.png" alt="FAQ cloud" />
+              <p class="question">What if I don't have a team?</p>
+              <p class="answer">
+                If you need a team, you can find individuals in the
+                <a href="https://discord.com/invite/fzk2zRuZQq" target="_blank"
+                  >Discord</a
+                >
+                or
+                <a href="https://th22.devpost.com/" target="_blank">DevPost</a>
+              </p>
+            </div>
+            <div class="faq" id="q8">
+              <img class="cloud-faq" src="assets/balloon1.png" alt="FAQ cloud" />
+              <p class="question">What can virtual participants view?</p>
+              <p class="answer">
+                We plan to have a live feed and recording of the Opening
+                Ceremony, Brainstorming Session, Tech Talks, Movie Night, How To
+                Demo, and the Closing Ceremony.
+              </p>
+            </div>
+            <div class="faq" id="q9">
+              <img class="cloud-faq" src="assets/balloon2.png" alt="FAQ cloud" />
+              <p class="question">
+                The question I have isn't frequently asked!
+              </p>
+              <p class="answer" style="width: 280px;">
+                If you've got something else on your mind, send it our way at
+                <a href="mailto: muengrtigerhacks@missouri.edu" target="_blank"
+                  >muengrtigerhacks@missouri.edu</a
+                >!
+                Additionally, feel free to message any member of the Planning
+                Committee on
+                <a href="https://discord.com/invite/fzk2zRuZQq" target="_blank"
+                  >Discord.</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="clouds-container">
+            <!-- Small clouds -->
+            <div class="sm1 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm2 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm3 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm4 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm5 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm6 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm7 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <!-- Medium clouds -->
+            <div class="md1 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md2 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <!-- <div class="md3 cloud"><img src="assets/cloud.png" alt="cloud" class="md"></div> -->
+            <div class="md4 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md5 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md6 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md7 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+
+            <!-- Large clouds -->
+            <div class="lg1 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+            <div class="lg2 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+            <div class="lg3 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+            <div class="lg4 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+          </div>
+          
+          <div class="plane-container">
+            <div class="plane">
+              <img id="planeGif" src="assets/plane.gif" alt="Truman the tiger flying a plane">
+              <img id="planePng" src="assets/plane.png" alt="Truman the tiger flying a plane">
+            </div>
+          </div>
+          
+        </div>
+        <div class="divider" id="div1">
+          <h2 class="divider-text">SCHEDULE & PRIZES</h2>
+        </div>
+
+        <div class="vertical-section night">
+          <div class="train-container">
+            <img class="train" src="assets/train.gif" alt="train" />
+            <img class="train-wheel" id="wheel1" src="assets/trainWheel.png" alt="train wheel" />
+            <img class="train-wheel" id="wheel2" src="assets/trainWheel.png" alt="train wheel" />
+          </div>
+          <img id="stars" src="assets/stars.png" alt="stars">
+          <div class="buildings-container">
+            <img src="assets/buildings.png" alt="buildings">
+          </div>
+          <div class="train-tracks"></div>
+
+          <div class="sched-container">
+            <div class="title-cont">
+              <h2 id="sched-title" class="bold">SCHEDULE</h2>
+            </div>
+            <div>
+              <div class="sched-row friday">
+                <div class="sched-date">
+                  <h3 class="bold">FRIDAY</h3>
+                  <p>November 4</p>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Mingle With Sponsors</h4>
+                    <p>Ketcham Main Hallway</p>
+                    <p>4:45 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Check-In</h4>
+                    <p>Lafferre Hall</p>
+                    <p>5:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Opening Ceremony</h4>
+                    <p>Ketcham Auditorium</p>
+                    <p>6:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Dinner [Raising Cane&apos;s]</h4>
+                    <p>Lafferre Time Capsule</p>
+                    <p>7:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Brainstorming &</h4>
+                    <h4 class="bold">Team Building</h4>
+                    <p>Ketcham Auditorium</p>
+                    <p>8:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Panera Talk: Lucid Dreams</h4>
+                    <h4 class="bold">Lucid Dreams</h4>
+                    <p>Ketcham Auditorium</p>
+                    <p>9:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Movie</h4>
+                    <p><i>Cars</i></p>
+                    <p>Ketcham Auditorium</p>
+                    <p>10:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Midnight Snack</h4>
+                    <p><i>Domino's & Andy's</i></p>
+                    <p>Lafferre Time Capsule</p>
+                    <p>11:45 AM</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sched-row saturday">
+                <div class="sched-date">
+                  <h3 class="bold">SATURDAY</h3>
+                  <p>November 5</p>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Breakfast</h3>
+                    <p><i>Panera</i></p>
+                    <p>Lafferre Time Capsule</p>
+                    <p>8:00 AM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Lunch</h3>
+                    <p><i>Pizza Tree</i></p>
+                    <p>Lafferre Time Capsule</p>
+                    <p>12:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">TBA Topic</h3>
+                    <p><i>Workshop with Professor Murrell</i></p>
+                    <p>Ketcham Auditorium</p>
+                    <p>1:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Side Hack: H&R Block</h3>
+                    <p><i>Code in the Dark</i></p>
+                    <p>Ketcham Auditorium</p>
+                    <p>2:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Smash Bros Tournament</h3>
+                    <p>Ketcham Auditorium</p>
+                    <p>3:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Sponsor Career Fair</h3>
+                    <p>Lafferre Main Hallway</p>
+                    <p>5:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Dinner</h4>
+                    <p><i>Como Smoke Fire & China Kitchen</i></p>
+                    <p>Lafferre Time Capsule</p>
+                    <p>7:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">Side Hack: Enterprise Holdings</h4>
+                    <p><i>Race Car Building Tournament</i></p>
+                    <p>Lafferre Hall</p>
+                    <p>8:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">VR Games w/ MU VR</h4>
+                    <p>Ketcham Auditorium</p>
+                    <p>9:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Midnight Snack</h3>
+                    <p><i>HotBox Cookies</i></p>
+                    <p>Lafferre Time Capsule</p>
+                    <p>11:45 PM</p>
+                  </div>
+                </div>
+              </div>
+              <div class="sched-row sunday">
+                <div class="sched-date">
+                  <h3 class="bold">SUNDAY</h3>
+                  <p>November 6</p>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Breakfast</h3>
+                    <p><i>Schnuck's Donuts</i></p>
+                    <p>Lafferre Time Capsule</p>
+                    <p>8:00 AM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">How to Demo</h3>
+                    <p>Ketcham Auditorium</p>
+                    <p>9:30 AM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Submissions Due</h3>
+                    <p>10:30 AM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Lunch</h3>
+                    <p><i>Noodles & Co.</i></p>
+                    <p>Lafferre Time Capsule</p>
+                    <p>11:00 AM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Judging Begins</h3>
+                    <p>12:00 PM</p>
+                  </div>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h3 class="bold">Closing Ceremony</h3>
+                    <p>Ketcham Auditorium</p>
+                    <p>2:00 PM</p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="prizes-container">
+            <div class="title-cont">
+              <h2 id="prize-title" class="bold">PRIZES</h2>
+            </div>
+            <div class="developer category" style="width: 670px;">
+              <h3 class="title">DEVELOPER</h3>
+              <div class="places">
+                <div style="flex: 33.33%;">
+                  <div class="prize-info">
+                    <h4>FIRST PLACE</h4>
+                    <img src="assets/prizes/cash.png" alt="$1000">
+                    <div>$4000 Cash<br><span style="font-size: 11px;">*split between each team member</span></div>
+                  </div>
+                </div>
+                <div style="flex: 33.33%;">
+                  <div class="prize-info">
+                    <h4>SECOND PLACE</h4>
+                    <img src="assets/prizes/console.png" alt="Xbox or PS5" style="width: 70%;">
+                    <div>Xbox Series X or PS5</div>
+                  </div>
+                </div>
+                <div style="flex: 33.33%;">
+                  <div class="prize-info">
+                    <h4>THIRD PLACE</h4>
+                    <img src="assets/prizes/forerunner.jpeg" alt="Garmin Forerunner 55" style="width: 70%;">
+                    <div>Garmin Forerunner 55</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="beginner category" style="width: 500px;">
+              <h3 class="title">BEGINNER</h3>
+              <div class="places">
+                <div style="flex: 50%;">
+                  <div class="prize-info">
+                    <h4>FIRST PLACE</h4>
+                    <img src="assets/prizes/jbl.png" alt="JBL Charge 5" style="width: 60%;">
+                    <div>JBL Charge 5</div>
+                  </div>
+                </div>
+                <div style="flex: 50%;">
+                  <div class="prize-info">
+                    <h4>SECOND PLACE</h4>
+                    <img src="assets/prizes/anker.png" alt="Anker Portable Charger" style="width: 60%;">
+                    <div>Anker Portable Charger</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="startup category" style="width: 500px;">
+              <h3 class="title">STARTUP</h3>
+              <div class="places">
+                <div style="flex: 50%;">
+                  <div class="prize-info">
+                    <h4>FIRST PLACE</h4>
+                    <img src="assets/prizes/lesscash.png" alt="$200" style="width: 70%;">
+                    <div>$200 Cash Each</div>
+                  </div>
+                </div>
+                <div style="flex: 50%;">
+                  <div class="prize-info">
+                    <h4>SECOND PLACE</h4>
+                    <img src="assets/prizes/ninja.png" alt="Ninja Airfryer" style="width: 40%;">
+                    <div>Ninja Air Fryer (AF101)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="crowd-vote category" style="width: 360px;">
+              <h3 class="title">CROWD-VOTE</h3>
+              <div class="places">
+                <div style="flex: 100%;">
+                  <div class="prize-info" style="padding-top: 60px;">
+                    <img src="assets/prizes/crowdvote.png" alt="Echo Dot and AirTag" style="width: 60%;">
+                    <div>Amazon Echo Dot & Apple AirTag</div>
+                  </div>
+                </div>
+              </div>
+              
+              
+            </div>
+          </div>
+          
+        </div>
+        
+
+        <div class="divider" id="div2">
+          <h2 class="divider-text smaller">SPONSORS & COMMITTEE</h2>
+        </div>
+        <div class="vertical-section ocean">
+          <div id="ocean-background"></div>
+          <img id="sand-image" src="assets/sand.png" alt="sand">
+          <div id="submarine-container">
+            <img id="submarine" src="assets/submarine.gif" alt="submarine">
+            <img id="submarinePng" src="assets/submarine.png" alt="submarine">
+          </div>
+          
+          
+          <div class="sponsors">
+            <div class="title-cont">
+              <h2 id="sponsors-title" class="bold">SPONSORS</h2>
+            </div>
+            <div class="gold tier">
+              <div class="banner" id="gold-banner">GOLD</div>
+              <a href="https://hrblock.com/" target="_blank" id="hr">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/h&rblock.png" alt="H&R Block">
+                </div>
+              </a>
+              <a href="https://careers.panerabread.com/global/en" target="_blank" id="panera">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/panera.png" alt="Panera Bread" style="width: 20vh;">
+                </div>
+              </a>
+            </div>
+            <div class="silver tier">
+              <div class="banner" id="silver-banner">SILVER</div>
+              <a href="https://www.shamrocktradingcorp.com/" target="_blank" id="shamrock">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/ShamrockTrading.png" alt="Shamrock Trading Corporation" style="width: 18vh">
+                </div>
+              </a>
+              <a href="https://www.shelterinsurance.com/" target="_blank" id="shelter">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/ShelterInsurance.png" alt="Shelter Insurance" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.centralbank.net/" target="_blank" id="central">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/centralbank.png" alt="Central Bank" style="width: 18vh">
+                </div>
+              </a>
+              <a href="www.https://www.enterpriseholdings.com/en/" target="_blank" id="enterprise">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/enterprise.png" alt="Enterprise Holdings" style="width: 16vh">
+                </div>
+              </a>
+              <a href="https://engineering.missouri.edu/departments/eit/" target="_blank" id="muit">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/muit.png" alt="MU Information Technology" style="width: 22vh">
+                </div>
+              </a>
+              <a href="https://careers.leggett.com/" target="_blank" id="lp">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/LP.png" alt="Legget & Platt" style="width: 25vh">
+                </div>
+              </a>
+            </div>
+            <div class="bronze tier">
+              <div class="banner" id="bronze-banner">BRONZE</div>
+              <a href="https://www.commercebank.com/" target="_blank" id="commerce">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/CommerceBank.png" alt="Commerce Bank" style="width: 14vh">
+                </div>
+              </a>
+              <a href="https://careers.veteransunited.com/" target="_blank" id="vu">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/VeteransUnited.png" alt="Veterans United Home Loans" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.tradebot.com/" target="_blank" id="tradebot">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/tradebot.png" alt="TradeBot" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.kansascityfed.org/" target="_blank" id="kcfed">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/kcFED.png" alt="KC Federal Reserve Bank" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.softwaredesignpartners.com/" target="_blank" id="sdp">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/SDP.png" alt="SoftwareDesignPartners" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://business.missouri.edu/cei" target="_blank" id="cei">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/cei.png" alt="Center for Entrepreneurship and Innovation" style="width: 15vh">
+                </div>
+              </a>
+              <!--  -->
+
+            </div>
+            <div class="partners tier">
+              <div class="banner" id="partners-banner">PARTNERS</div>
+              <a href="https://midlandusa.com/" target="_blank" id="midland">
+
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/midlandradio.png" alt="Midland Radio" style="width: 11vh;">
+                </div>
+              </a>
+              <a href="https://www.hotboxcookies.com/" target="_blank" id="hotbox">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/hotbox.png" alt="Hotbox Cookies" style="width: 7vh;">
+                </div>
+              </a>
+              <a href="https://www.stickergiant.com/event-coupons?utm_source=website&utm_medium=event" target="_blank" id="stickergiant">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/stickergiant.png" alt="Sticker Giant" style="width: 10vh;">
+                </div>
+              </a>
+              <a href="https://www.axure.com/" target="_blank" id="axure">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/axure.webp" alt="Axure" style="width: 9vh;">
+                </div>
+              </a>
+              <a href="https://www.eatandys.com/" target="_blank" id="andys">
+                <div class="sponsor">
+                  <img src="assets/logos/andys.png" alt="Andy's" style="width: 10vh;">
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="committee">
+            <div class="title-cont">
+              <h2 id="committee-title" class="bold">PLANNING COMMITTEE</h2>
+            </div>
+            <div class="members">
+              <div class="row">
+                <div class="member">
+                  <img src="assets/headshots/JacobLaGesse.jpg">
+                  <p class="name">Jacob LaGesse</p>
+                  <p class="title">Director</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/HaileyJessee.jpg">
+                  <p class="name">Hailey Jessee</p>
+                  <p class="title">Logistics</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/HaleyWilliams.png">
+                  <p class="name">Haley Williams</p>
+                  <p class="title">Marketing</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/GraceHardester.jpeg">
+                  <p class="name">Grace Hardester</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/MatthewMarlow.jpg">
+                  <p class="name">Matt Marlow</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/TylerHarsell.jpg">
+                  <p class="name">Tyler Harsell</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/SarahDuong.png" alt="Sarah Duong">
+                  <p class="name">Sarah Duong</p>
+                  <p class="title">Member</p>
+                </div>
+                
+              </div>
+              <div class="row">
+                
+                <div class="member">
+                  <img src="assets/headshots/JohnsonLuu.jpeg">
+                  <p class="name">Johnson Luu</p>
+                  <p class="title">Sponsorships</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/IsaacErnst.jpeg">
+                  <p class="name">Isaac Ernst</p>
+                  <p class="title">HackerX</p>
+                </div>
+                
+                <div class="member">
+                  <img src="assets/headshots/PaulHemingway.JPG">
+                  <p class="name">Paul Hemingway</p>
+                  <p class="title">Technology</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/DarianHu.jpeg">
+                  <p class="name">Darian Hu</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/NickWylie.jpeg">
+                  <p class="name">Nick Wylie</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/SamuelMcIntyre.jpeg">
+                  <p class="name">Samuel McIntyre</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/KermitKreder.png" alt="Kermit Kreder">
+                  <p class="name">Kermit Kreder</p>
+                  <p class="title">Member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider" id="div3">
+          <h2 class="divider-text">REGISTER</h2>
+        </div>
+        <div class="vertical-section register">
+          <div class="register-link">
+            <img class="art" id="art1" src="assets/art1.png" alt="art">
+            <img class="art" id="art2" src="assets/art1.png" alt="art">
+            <a class="register-page-btn" href="register.html">click here to<br><span>REGISTER</span><br>for tigerhacks</a>
+          </div>
+          <div id="form-container" style="width: 100vw;">
+            <img class="art" id="art1" src="assets/art1.png" alt="art">
+            <img class="art" id="art2" src="assets/art1.png" alt="art">
+            <form id="register-form" onsubmit="event.preventDefault(); addContestant()">
+              <div id="inputs">
+                <h2>Register for<br>TigerHacks</h2>
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantFName">First Name</label>
+                    <input id="contestantFName" type="text" />
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantLName">Last Name</label>
+                    <input id="contestantLName" type="text" />
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+                
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantEmail">Email Address</label>
+                    <input id="contestantEmail" type="email" />
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantPhone">Phone Number</label>
+                    <input id="contestantPhone" type="tel" maxlength="14" placeholder="(XXX) XXX-XXXX" >
+                    <div class="register-error-message">   </div>
+                  </div>
+                </div>
+
+                <div class="row oneCol">
+                  <div class="register-input">
+                    <label for="contestantSchool">School</label>
+                    <input list="schools" id="contestantSchool" />
+                    <datalist id="schools">
+                    </datalist>
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantStudyLevel">Level of Study</label>
+                    <select id="contestantStudyLevel">
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="High School">High School</option>
+                      <option value="Undergrad">Undergraduate</option>
+                      <option value="Grad">Graduate</option>
+                      <option value="N/A">N/A</option>
+                    </select>
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantMajor">Major</label>
+                    <input list="majorsList" id="contestantMajor"/>
+                    <datalist id="majorsList">
+                    </datalist>
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+                
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantGender">Gender</label>
+                    <select id="contestantGender">
+                      <option value="Man">Man</option>
+                      <option value="Woman">Woman</option>
+                      <option value="Transgender">Transgender</option>
+                      <option value="Non-conforming">Non-conforming</option>
+                      <option value="Prefer Not to Answer" selected>Prefer Not to Answer</option>
+                    </select>
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantShirtSize">T-Shirt Size</label>
+                    <select id="contestantShirtSize">
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="2XL">2XL</option>
+                      <option value="3XL">3XL</option>
+                    </select>
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                      <label for="contestantDiet">Dietary Restrictions</label>
+                      <select id="contestantDiet">
+                        <option value="" disabled selected>Select an option</option>
+                        <option value="None">None</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                        <option value="Vegan">Vegan</option>
+                        <option value="Peanut Allergy">Peanut Allergy</option>
+                        <option value="Gluten Free">Gluten-Free</option>
+                      </select>
+                    <div class="register-error-message"></div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantInPerson">Attendance</label>
+                    <select id="contestantInPerson">
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="Virtually">Virtually (Only for non-Missouri students)</option>
+                      <option value="In Person">In-Person</option>
+                    </select>
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                <div class="row twoCol">
+                  <div class="register-input">
+                    <label for="contestantAddress">Mailing Address</label>
+                    <input id="contestantAddress" type="text" placeholder="(Street Name, City, State/Province, Postal Code, Country)" />
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantBirthDay">Date of Birth</label>
+                    <input id="contestantBirthDay" type="date" />
+                    <div class="register-error-message"></div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantGradDate">Graduation Date (Optional)</label>
+                    <input id="contestantGradDate" type="date" />
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                <div class="row oneCol resumeRow">
+                  <div>
+                    <label for="contestantResume">Upload PDF Resume (Optional)</label>
+                    <input
+                      id="contestantResume"
+                      type="file"
+                      accept=".pdf"
+                    />
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                <div class="row mlh-terms">
+                  <div class="check" style="margin-bottom: 10px;">
+                    <input type="checkbox" id="discord-check">
+                    <label for="discord-check">I am planning or have joined the <a href="https://discord.com/invite/fzk2zRuZQq" target="_blank">TigerHacks Discord</a>.</label>
+                  </div>
+                  <div class="check" style="margin-bottom: 10px;">
+                    <input type="checkbox" id="terms-check">
+                    <label for="terms-check">I have read and agreed to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.</label>
+                  </div>
+                  <div class="check" style="margin-bottom: 10px;">
+                    <input type="checkbox" id="share-check">
+                    <label for="share-check">I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/main/contest-terms.md" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</label>
+                  </div>
+                  <div class="check" style="margin-bottom: 10px;">
+                    <input type="checkbox" class="check-box-error" id="email-check">
+                    <label for="email-check">I authorize MLH to send me an email where I can further opt into the MLH Hacker, Events, or Organizer Newsletters and other communications from MLH. (Optional)</label>
+                  </div>
+                  <p class="register-error-message" id="mlh-error"></p>
+                  
+                </div>
+                <div class="row oneCol bottom-row">
+                  
+                  <div class="submit-btn">
+                    <button type="submit" id="sumbitFirebaseButton">SUBMIT</button>
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+              </div>
+              
+            </form>
+            <div id="success-container">
+              <h2>Thank you for signing up for Tiger Hacks!</h2>
+              <p><strong>Confirmation email sent!</strong> <br> (If you don't see it, check your junk/spam folder)<br><br>
+                Any questions? Feel free to email us at <a href="mailTo: muengrtigerhacks@missouri.edu">muengrtigerhacks@missouri.edu</a>!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed-info">
+        <div class="scroll-banner">
+          <audio id="myAudio">
+            <source src="./assets/tigerHacksTheme.mp3" type="audio/mp3">
+          </audio>
+          <p>Theme Song</p>
+          <button style="background-color:transparent;border:none;cursor: pointer;" onclick="playThemeSong()"><span class="material-symbols-outlined" id="theme-song-icon">volume_up</span></button>
+        </div>
+        <div class="scroll-banner">
+          <p>Scroll up or down</p>
+          <span class="material-symbols-outlined" id="mouse-icon">mouse</span>
+        </div>
+
+        <div class="register-btn">
+          <button onClick="scrollBottom()">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="./jquery-csv.js"></script>
+    <script src="./firebaseForm.js"></script>
+  </body>
+</html>

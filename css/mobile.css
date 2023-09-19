@@ -1,0 +1,324 @@
+:root {
+    --dark-blue: #003049;
+    --blue: #449DD1;
+    --light-blue: #78C0E0;
+    --yellow: #FFC857;
+    --red: #DB3A34;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Eurostile";
+    src: url("../assets/eurostile/EuroStyle\ Normal.ttf")
+}
+
+@font-face {
+    font-family: "EurostileBold";
+    src: url("../assets/eurostile/EurostileBold.ttf")
+}
+
+@font-face {
+    font-family: "EurostileOblique";
+    src: url("../assets/eurostile/EurostileOblique.ttf")
+}
+
+@font-face {
+    font-family: "Cloud";
+    src: url("../assets/DCC\ -\ Cloud.otf")
+}
+
+body {
+    margin: 0;
+}
+
+.mobile .container {
+    width: 100%;
+}
+
+.mobile .opening {
+  height: 100vh;
+  margin-bottom: 300px;
+}
+
+.mobile .title-cloud {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    z-index: 2;
+    font-family: "Cloud", sans-serif;
+    color: white;
+    letter-spacing: 8px;
+}
+
+.mobile .title-cloud h1 {
+    font-size: 8vw;
+    padding: 7%;
+}
+
+.mobile .title-cloud p {
+  color: white;
+  font-weight: 600;
+  font-size: 3vw;
+  letter-spacing: 4px;
+}
+
+.mobile .sky {
+    background-image: linear-gradient(#d2f2ff, var(--light-blue));
+    width: 100%;
+}
+
+.mobile .night {
+    background-image: linear-gradient(#001927, var(--dark-blue));
+    position: relative;
+    overflow: hidden;
+    padding: 50px 0;
+}
+
+.mobile .clouds-container {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+.mobile .cloud {
+    position: absolute;
+    top: 0;
+    opacity: 0.7;
+}
+
+/* SMALL CLOUDS */
+.mobile .sm1 {}
+.mobile .sm2 {}
+.mobile .sm3 {}
+.mobile .sm4 {}
+.mobile .sm5 {}
+.mobile .sm6 {}
+.mobile .sm7 {}
+
+/* MEDIUM CLOUDS  */
+.mobile .md1 {}
+.mobile .md2 {}
+.mobile .md3 {}
+.mobile .md4 {}
+.mobile .md5 {}
+.mobile .md6 {}
+.mobile .md7 {}
+
+/* LARGE CLOUDS  */
+.mobile .lg1 {}
+.mobile .lg2 {}
+.mobile .lg3 {}
+.mobile .lg4 {}
+
+.mobile .clouds-container .sm {width: 40px;}
+.mobile .clouds-container .md {width: 100px;}
+.mobile .clouds-container .lg {width: 175px;}
+
+
+.mobile .clouds-container img {
+    position: relative;
+}
+
+.mobile .faq-row {
+    display: flex;
+    width: 100%;
+    margin-right: 5%;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    /* height: 400px; */
+}
+
+.mobile .faq-row > * {
+  flex: 50%;
+}
+
+.mobile .faq-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mobile .faq .question {
+    font-size: 2vw;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+    text-shadow: 0 0 5px black;
+    border-radius: 100px;
+    padding: 0 15px;
+    width: 55%;
+    position: absolute;
+    top: 12vw;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: shakeme 6s ease infinite;
+}
+
+@keyframes shakeme {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  5% {
+    transform: translateX(-50%) scale(0.7);
+  }
+  10% {
+    transform: translateX(-50%) scale(1.3);
+  }
+  15% {
+    transform: translateX(-50%) scale(1.1);
+  }
+  20% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  30% {
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+.mobile .faq .answer {
+    background-color: var(--yellow);
+    font-size: 1.5vw;
+    width: 24vw;
+    font-family: "Inter", sans-serif;
+    left: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 15px;
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid black;
+  
+}
+
+.mobile .faq .answer a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: underline;
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+@keyframes sway {
+    0% {
+        transform: translate(0, 0) rotate(-1deg)
+    }
+
+    25% {
+        transform: translate(15px, 8px)
+    }
+
+    50% {
+        transform: translate(-4px, 0px) rotate(2deg)
+    }
+
+    75% {
+        transform: translate(-5px, 10px)
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(-1deg)
+    }
+}
+
+.mobile .faq {
+    width: 220px;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    /* animation: sway 12s ease infinite; */
+    height: auto;
+    transform: translate(0, 0) rotate(-1deg);
+    text-align: center;
+    position: relative;
+}
+
+.mobile .cloud-faq {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.mobile .faq-title {
+    font-family: "Cloud", sans-serif;
+    display: inline-block;
+    width: 80%;
+    font-size: 4vw;
+    margin: 0 auto 50px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 8px;
+    text-align: center;
+}
+
+.mobile .faq-title p{
+  margin-top: 15px;
+}
+
+
+
+.mobile #stars {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.mobile .schedule {
+
+}
+
+.mobile .title-cont {
+  color: white;
+  font-family: 'EurostileBold', sans-serif;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 3vw;
+}
+
+.mobile .title-cont h3 {
+  display: inline;
+  padding: 5px;
+  background-color: var(--red);
+}
+
+.mobile .events-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  text-align: center;
+  color: white;
+  font-family: 'Eurostile', sans-serif;
+}
+
+.mobile .sched-col > div {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
+  border-top: 1px solid rgb(86, 86, 86);
+  padding: 10px;
+}
+
+
+.mobile .sched-date h4 {
+  font-family: 'EurostileBold', sans-serif;
+  font-size: 4vw;
+}
+
+.mobile .events-container .friday,
+  .mobile .events-container .sunday {
+    color: var(--yellow);
+  }
+
+.mobile .sched-date {
+
+}

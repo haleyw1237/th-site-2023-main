@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script type="application/json" src="schools.json"></script>
+    <link rel="icon" type="image/png" href="assets/tiger.png">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/sky.css" />
+    <link rel="stylesheet" href="css/night.css" />
+    <link rel="stylesheet" href="css/ocean.css" />
+    <link rel="stylesheet" href="css/register.css" />
+
+    <title>TigerHacks</title>
+  </head>
+  <body>
+    
+    <div id="page"></div>
+    <div id="canvas">
+      <img id="hackathon" src="assets/mlh.svg" alt="Major League Hacking 2022 Hackathon Season">
+      <div class="container">
+        
+        <div class="vertical-section sky">
+          <div class="title-cloud">
+            <img id="main-logo" src="assets/tigerhackslogo.png" alt="tigerhacks logo">
+            <h2 class="cloud-text">TigerHacks 2022</h2>
+            <p class="cloud-text">lafferre hall & virtual</p>
+            <p class="cloud-text">November 4-6, 2022</p>
+            <p class="small-title">scroll up or down to navigate!</p>
+          </div>
+
+
+          <!-- Frequently Asked Questions -->
+          <div class="faq-section">
+            <div class="faq-title">
+              <h2>Frequently Asked Questions</h2>
+              <p class="small-title">Click to reveal answers!</p>
+            </div>
+            <div class="faq" id="q1">
+              <img class="cloud-faq" src="assets/balloon1.png" alt="FAQ cloud" />
+              <p class="question">What happens at a hackathon?</p>
+              <p class="answer">
+                Participants (hackers) spend 36 hours working in small teams to
+                design and build projects they're excited about. You bring your
+                ideas and we give you everything you need to make them come to
+                life, including workshops, mentors, food, and swag!
+              </p>
+            </div>
+            <div class="faq" id="q2">
+              <img class="cloud-faq" src="assets/balloon2.png" alt="FAQ cloud" />
+              <p class="question">How many people are on a team?</p>
+              <p class="answer">Teams can range from 1 - 4 individuals.</p>
+            </div>
+            <div class="faq" id="q3">
+              <img class="cloud-faq" src="assets/balloon3.png" alt="FAQ cloud" />
+              <p class="question">What do teams usually make?</p>
+              <p class="answer">
+                A wide variety of things! Web/mobile applications, AI/ML, AR/VR,
+                games, even hardware. Whatever interests you most is likely to
+                yield the best results!
+              </p>
+            </div>
+            <div class="faq" id="q4">
+              <img class="cloud-faq" src="assets/balloon4.png" alt="FAQ cloud" />
+              <p class="question">Do I have to know how to code to attend?</p>
+              <p class="answer">
+                Nope! We will provide resources including workshops and a
+                mentorship system to help beginners get started. Additionally,
+                one room will be dedicated to new hackers with several beginner
+                project ideas.
+              </p>
+            </div>
+            <div class="faq" id="q5">
+              <img class="cloud-faq" src="assets/balloon5.png" alt="FAQ cloud" />
+              <p class="question">Who runs TigerHacks?</p>
+              <p class="answer">
+                TigerHacks is organized and hosted by a group of dedicated and
+                passionate young nerds, who are members of the Mizzou Computing
+                Association (MCA) at the University of Missouri.
+              </p>
+            </div>
+            <div class="faq" id="q6">
+              <img class="cloud-faq" src="assets/balloon6.png" alt="FAQ cloud" />
+              <p class="question">Where do I register my team?</p>
+              <p class="answer">
+                You can register using
+                <a href="https://th22.devpost.com/">this link</a>, starting on
+                November 4th at 5PM.
+              </p>
+            </div>
+            <div class="faq" id="q7">
+              <img class="cloud-faq" src="assets/balloon7.png" alt="FAQ cloud" />
+              <p class="question">What if I don't have a team?</p>
+              <p class="answer">
+                If you need a team, you can find individuals in the
+                <a href="https://discord.com/invite/fzk2zRuZQq" target="_blank"
+                  >Discord</a
+                >
+                or
+                <a href="https://th22.devpost.com/" target="_blank">DevPost</a>
+              </p>
+            </div>
+            <div class="faq" id="q8">
+              <img class="cloud-faq" src="assets/balloon1.png" alt="FAQ cloud" />
+              <p class="question">What can virtual participants view?</p>
+              <p class="answer">
+                We plan to have a live feed and recording of the Opening
+                Ceremony, Brainstorming Session, Tech Talks, Movie Night, How To
+                Demo, and the Closing Ceremony.
+              </p>
+            </div>
+            <div class="faq" id="q9">
+              <img class="cloud-faq" src="assets/balloon2.png" alt="FAQ cloud" />
+              <p class="question">
+                The question I have isn't frequently asked!
+              </p>
+              <p class="answer">
+                If you've got something else on your mind, send it our way at
+                <a href="mailto: tigerhackshd@gmail.com" target="_blank"
+                  >tigerhackshd@gmail.com</a
+                >!
+                Additionally, feel free to message any member of the Planning
+                Committee on
+                <a href="https://discord.com/invite/fzk2zRuZQq" target="_blank"
+                  >Discord.</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div class="clouds-container">
+            <!-- Small clouds -->
+            <div class="sm1 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm2 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm3 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm4 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm5 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm6 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <div class="sm7 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="sm" />
+            </div>
+            <!-- Medium clouds -->
+            <div class="md1 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md2 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <!-- <div class="md3 cloud"><img src="assets/cloud.png" alt="cloud" class="md"></div> -->
+            <div class="md4 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md5 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md6 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+            <div class="md7 cloud">
+              <img src="assets/cloud.png" alt="cloud" class="md" />
+            </div>
+
+            <!-- Large clouds -->
+            <div class="lg1 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+            <div class="lg2 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+            <div class="lg3 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+            <div class="lg4 cloud l">
+              <img src="assets/cloud.png" alt="cloud" class="lg" />
+            </div>
+          </div>
+          
+          <div class="plane-container">
+            <div class="plane">
+              <img id="planeGif" src="assets/plane.gif" alt="Truman the tiger flying a plane">
+              <img id="planePng" src="assets/plane.png" alt="Truman the tiger flying a plane">
+            </div>
+          </div>
+          
+        </div>
+        <div class="divider" id="div1">
+          <h2 class="divider-text">SCHEDULE & PRIZES</h2>
+        </div>
+
+        <div class="vertical-section night">
+          <div class="train-container">
+            <img class="train" src="assets/train.gif" alt="train" />
+            <img class="train-wheel" id="wheel1" src="assets/trainWheel.png" alt="train wheel" />
+            <img class="train-wheel" id="wheel2" src="assets/trainWheel.png" alt="train wheel" />
+          </div>
+          <img id="stars" src="assets/stars.png" alt="stars">
+          <div class="buildings-container">
+            <img src="assets/buildings.png" alt="buildings">
+          </div>
+          <div class="train-tracks"></div>
+
+          <div class="sched-container">
+            <div class="title-cont">
+              <h2 id="sched-title" class="bold">SCHEDULE</h2>
+            </div>
+            <div>
+              <div class="sched-row friday">
+                <div class="sched-date">
+                  <h3 class="bold">FRIDAY</h3>
+                  <p>November 4</p>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">TBD</h4>
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="sched-row saturday">
+                <div class="sched-date">
+                  <h3 class="bold">SATURDAY</h3>
+                  <p>November 5</p>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">TBD</h4>
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+              <div class="sched-row sunday">
+                <div class="sched-date">
+                  <h3 class="bold">SUNDAY</h3>
+                  <p>November 6</p>
+                </div>
+                <div class="sched-event">
+                  <div class="event-info">
+                    <h4 class="bold">TBD</h4>
+                    <p></p>
+                    <p></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="prizes-container">
+            <div class="title-cont">
+              <h2 id="prize-title" class="bold">PRIZES</h2>
+            </div>
+            <div class="developer category">
+              <h3 class="title">DEVELOPER</h3>
+              <div class="places">
+                <div>
+                  <div class="prize-info">
+                    <h4>FIRST PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>SECOND PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>THIRD PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="beginner category">
+              <h3 class="title">BEGINNER</h3>
+              <div class="places">
+                <div>
+                  <div class="prize-info">
+                    <h4>FIRST PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>SECOND PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>THIRD PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="startup category">
+              <h3 class="title">STARTUP</h3>
+              <div class="places">
+                <div>
+                  <div class="prize-info">
+                    <h4>FIRST PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>SECOND PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>THIRD PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="most-impactful category">
+              <h3 class="title">MOST IMPACTFUL</h3>
+              <div class="places">
+                <div>
+                  <div class="prize-info">
+                    <h4>FIRST PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>SECOND PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+                <div>
+                  <div class="prize-info">
+                    <h4>THIRD PLACE</h4>
+                    <div>TBD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+
+        <div class="divider" id="div2">
+          <h2 class="divider-text smaller">SPONSORS & COMMITTEE</h2>
+        </div>
+        <div class="vertical-section ocean">
+          <div id="ocean-background"></div>
+          <img id="sand-image" src="assets/sand.png" alt="sand">
+          <img id="submarine" src="assets/submarine.gif" alt="submarine">
+          <img id="submarinePng" src="assets/submarine.png" alt="submarine">
+          
+          <div class="sponsors">
+            <div class="title-cont">
+              <h2 id="sponsors-title" class="bold">SPONSORS</h2>
+            </div>
+            <div class="gold tier">
+              <div class="banner" id="gold-banner">GOLD</div>
+              <a href="https://hrblock.com/" target="_blank" id="hr">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/h&rblock.png" alt="H&R Block">
+                </div>
+              </a>
+              <a href="https://careers.panerabread.com/global/en" target="_blank" id="panera">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/panera.png" alt="Panera Bread" style="width: 20vh;">
+                </div>
+              </a>
+            </div>
+            <div class="silver tier">
+              <div class="banner" id="silver-banner">SILVER</div>
+              <a href="https://www.shamrocktradingcorp.com/" target="_blank" id="shamrock">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/ShamrockTrading.png" alt="Shamrock Trading Corporation" style="width: 18vh">
+                </div>
+              </a>
+              <a href="https://www.shelterinsurance.com/" target="_blank" id="shelter">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/ShelterInsurance.png" alt="Shelter Insurance" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.centralbank.net/" target="_blank" id="central">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/centralbank.png" alt="Central Bank" style="width: 18vh">
+                </div>
+              </a>
+              <a href="www.https://www.enterpriseholdings.com/en/" target="_blank" id="enterprise">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/enterprise.png" alt="Enterprise Holdings" style="width: 16vh">
+                </div>
+              </a>
+            </div>
+            <div class="bronze tier">
+              <div class="banner" id="bronze-banner">BRONZE</div>
+              <a href="https://www.commercebank.com/" target="_blank" id="commerce">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/CommerceBank.png" alt="Commerce Bank" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://careers.veteransunited.com/" target="_blank" id="vu">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/VeteransUnited.png" alt="Veterans United Home Loans" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.tradebot.com/" target="_blank" id="tradebot">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/tradebot.png" alt="TradeBot" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.softwaredesignpartners.com/" target="_blank" id="sdp">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/SDP.png" alt="SoftwareDesignPartners" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://www.kansascityfed.org/" target="_blank" id="kcfed">
+                <div class="sponsor">
+                  <img class="black-shadow" src="assets/logos/kcFED.png" alt="KC Federal Reserve Bank" style="width: 12vh">
+                </div>
+              </a>
+              <a href="https://engineering.missouri.edu/departments/it/" target="_blank" id="muit">
+                <div class="sponsor">
+                  <img class="white-shadow" src="assets/logos/mu.png" alt="MU Information Technology" style="width: 7vh">
+                </div>
+              </a>
+
+            </div>
+            <div class="partners">
+              <h3>Partners</h3>
+              <a href="https://midlandusa.com/" target="_blank"><img src="assets/logos/midlandradio.png" alt="Midland Radio"></a>
+              <a href="https://www.hotboxcookies.com/" target="_blank"><img src="assets/logos/hotbox.png" alt="hotbox cookies"></a>
+              
+            </div>
+          </div>
+
+          <div class="committee">
+            <div class="title-cont">
+              <h2 id="committee-title" class="bold">PLANNING COMMITTEE</h2>
+            </div>
+            <div class="members">
+              <div class="row">
+                <div class="member">
+                  <img src="assets/headshots/JacobLaGesse.jpg">
+                  <p class="name">Jacob LaGesse</p>
+                  <p class="title">President</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/HaileyJessee.jpg">
+                  <p class="name">Hailey Jessee</p>
+                  <p class="title">Logistics</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/HaleyWilliams.png">
+                  <p class="name">Haley Williams</p>
+                  <p class="title">Marketing</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/GraceHardester.jpeg">
+                  <p class="name">Grace Hardester</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/MatthewMarlow.jpg">
+                  <p class="name">Matt Marlow</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/TylerHarsell.jpg">
+                  <p class="name">Tyler Harsell</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/SarahDuong.png" alt="Sarah Duong">
+                  <p class="name">Sarah Duong</p>
+                  <p class="title">Member</p>
+                </div>
+              </div>
+              <div class="row">
+                
+                <div class="member">
+                  <img src="assets/headshots/JohnsonLuu.jpeg">
+                  <p class="name">Johnson Luu</p>
+                  <p class="title">Sponsorships</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/IsaacErnst.jpeg">
+                  <p class="name">Isaac Ernst</p>
+                  <p class="title">HackerX</p>
+                </div>
+                
+                <div class="member">
+                  <img src="assets/headshots/PaulHemingway.JPG">
+                  <p class="name">Paul Hemingway</p>
+                  <p class="title">Technology</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/DarianHu.jpeg">
+                  <p class="name">Darian Hu</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/NickWylie.jpeg">
+                  <p class="name">Nick Wylie</p>
+                  <p class="title">Member</p>
+                </div>
+                <div class="member">
+                  <img src="assets/headshots/SamuelMcIntyre.jpeg">
+                  <p class="name">Samuel McIntyre</p>
+                  <p class="title">Member</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="divider" id="div3">
+          <h2 class="divider-text">REGISTER</h2>
+        </div>
+        <div class="vertical-section register">
+          
+          <div id="form-container">
+            <img class="art" id="art1" src="assets/art1.png" alt="art">
+            <img class="art" id="art2" src="assets/art1.png" alt="art">
+            <form id="register-form" onsubmit="event.preventDefault(); addContestant()">
+              <div id="inputs">
+                <h2>Sign Up For Tiger Hacks</h2>
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantFName">First Name</label>
+                    <input id="contestantFName" type="text" />
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantLName">Last Name</label>
+                    <input id="contestantLName" type="text" />
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+                
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantEmail">Email Address</label>
+                    <input id="contestantEmail" type="email" />
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantPhone">Phone Number</label>
+                    <input id="contestantPhone" type="tel" maxlength="14" placeholder="(XXX) XXX-XXXX" >
+                    <div class="register-error-message">   </div>
+                  </div>
+                </div>
+
+                <div class="row oneCol">
+                  <div class="register-input">
+                    <label for="contestantSchool">School</label>
+                    <input list="schools" id="contestantSchool" />
+                    <datalist id="schools">
+                    </datalist>
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantStudyLevel">Level of Study</label>
+                    <select id="contestantStudyLevel">
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="High School">High School</option>
+                      <option value="Undergrad">Undergraduate</option>
+                      <option value="Grad">Graduate</option>
+                      <option value="N/A">N/A</option>
+                    </select>
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantMajor">Major</label>
+                    <input list="majorsList" id="contestantMajor"/>
+                    <datalist id="majorsList">
+                    </datalist>
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+                
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantGender">Gender</label>
+                    <select id="contestantGender">
+                      <option value="Woman">Woman</option>
+                      <option value="Man">Man</option>
+                      <option value="Transgender">Transgender</option>
+                      <option value="Non-conforming">Non-conforming</option>
+                      <option value="Prefer Not to Answer" selected>Prefer Not to Answer</option>
+                    </select>
+                    <div class="register-error-message">  </div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantShirtSize">T-Shirt Size</label>
+                    <select id="contestantShirtSize">
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M" selected>M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="2XL">2XL</option>
+                      <option value="3XL">3XL</option>
+                    </select>
+                    <div class="register-error-message">  </div>
+                  </div>
+                </div>
+
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                      <label for="contestantDiet">Dietary Restrictions</label>
+                      <input list="diets" id="contestantDiet" placeholder="Enter your dietary Restriction" style="width:100%;"/>
+                      <datalist id="diets">
+                        <option value="None"></option>
+                        <option value="Vegetarian"></option>
+                        <option value="Vegan"></option>
+                        <option value="Peanut Allergy"></option>
+                        <option value="Gluten Free"></option>
+                      </datalist>
+                    <div class="register-error-message"></div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantInPerson">Attendance</label>
+                    <select id="contestantInPerson">
+                      <option value="" disabled selected>Select an option</option>
+                      <option value="Virtually">Virtually</option>
+                      <option value="In Person">In-person</option>
+                    </select>
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                <div class="row twoCol">
+                  <div class="register-input">
+                    <label for="contestantAddress">Mailing Address</label>
+                    <input id="contestantAddress" type="text" placeholder="So we can send you your swag" />
+                    <div class="register-error-message"></div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantCountry">Country</label>
+                    <select id="contestantCountry">
+                      <option value="" disabled selected>Select a country</option>
+                      <option value="Afghanistan">Afghanistan</option>
+                      <option value="Åland Islands">Åland Islands</option>
+                      <option value="Albania">Albania</option>
+                      <option value="Algeria">Algeria</option>
+                      <option value="American Samoa">American Samoa</option>
+                      <option value="Andorra">Andorra</option>
+                      <option value="Angola">Angola</option>
+                      <option value="Anguilla">Anguilla</option>
+                      <option value="Antarctica">Antarctica</option>
+                      <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                      <option value="Argentina">Argentina</option>
+                      <option value="Armenia">Armenia</option>
+                      <option value="Aruba">Aruba</option>
+                      <option value="Australia">Australia</option>
+                      <option value="Austria">Austria</option>
+                      <option value="Azerbaijan">Azerbaijan</option>
+                      <option value="Bahamas">Bahamas</option>
+                      <option value="Bahrain">Bahrain</option>
+                      <option value="Bangladesh">Bangladesh</option>
+                      <option value="Barbados">Barbados</option>
+                      <option value="Belarus">Belarus</option>
+                      <option value="Belgium">Belgium</option>
+                      <option value="Belize">Belize</option>
+                      <option value="Benin">Benin</option>
+                      <option value="Bermuda">Bermuda</option>
+                      <option value="Bhutan">Bhutan</option>
+                      <option value="Bolivia">Bolivia</option>
+                      <option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                      <option value="Botswana">Botswana</option>
+                      <option value="Bouvet Island">Bouvet Island</option>
+                      <option value="Brazil">Brazil</option>
+                      <option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                      <option value="Brunei Darussalam">Brunei Darussalam</option>
+                      <option value="Bulgaria">Bulgaria</option>
+                      <option value="Burkina Faso">Burkina Faso</option>
+                      <option value="Burundi">Burundi</option>
+                      <option value="Cambodia">Cambodia</option>
+                      <option value="Cameroon">Cameroon</option>
+                      <option value="Canada">Canada</option>
+                      <option value="Cape Verde">Cape Verde</option>
+                      <option value="Cayman Islands">Cayman Islands</option>
+                      <option value="Central African Republic">Central African Republic</option>
+                      <option value="Chad">Chad</option>
+                      <option value="Chile">Chile</option>
+                      <option value="China">China</option>
+                      <option value="Christmas Island">Christmas Island</option>
+                      <option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                      <option value="Colombia">Colombia</option>
+                      <option value="Comoros">Comoros</option>
+                      <option value="Congo">Congo</option>
+                      <option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+                      <option value="Cook Islands">Cook Islands</option>
+                      <option value="Costa Rica">Costa Rica</option>
+                      <option value="Cote D'ivoire">Cote D'ivoire</option>
+                      <option value="Croatia">Croatia</option>
+                      <option value="Cuba">Cuba</option>
+                      <option value="Cyprus">Cyprus</option>
+                      <option value="Czech Republic">Czech Republic</option>
+                      <option value="Denmark">Denmark</option>
+                      <option value="Djibouti">Djibouti</option>
+                      <option value="Dominica">Dominica</option>
+                      <option value="Dominican Republic">Dominican Republic</option>
+                      <option value="Ecuador">Ecuador</option>
+                      <option value="Egypt">Egypt</option>
+                      <option value="El Salvador">El Salvador</option>
+                      <option value="Equatorial Guinea">Equatorial Guinea</option>
+                      <option value="Eritrea">Eritrea</option>
+                      <option value="Estonia">Estonia</option>
+                      <option value="Ethiopia">Ethiopia</option>
+                      <option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                      <option value="Faroe Islands">Faroe Islands</option>
+                      <option value="Fiji">Fiji</option>
+                      <option value="Finland">Finland</option>
+                      <option value="France">France</option>
+                      <option value="French Guiana">French Guiana</option>
+                      <option value="French Polynesia">French Polynesia</option>
+                      <option value="French Southern Territories">French Southern Territories</option>
+                      <option value="Gabon">Gabon</option>
+                      <option value="Gambia">Gambia</option>
+                      <option value="Georgia">Georgia</option>
+                      <option value="Germany">Germany</option>
+                      <option value="Ghana">Ghana</option>
+                      <option value="Gibraltar">Gibraltar</option>
+                      <option value="Greece">Greece</option>
+                      <option value="Greenland">Greenland</option>
+                      <option value="Grenada">Grenada</option>
+                      <option value="Guadeloupe">Guadeloupe</option>
+                      <option value="Guam">Guam</option>
+                      <option value="Guatemala">Guatemala</option>
+                      <option value="Guernsey">Guernsey</option>
+                      <option value="Guinea">Guinea</option>
+                      <option value="Guinea-bissau">Guinea-bissau</option>
+                      <option value="Guyana">Guyana</option>
+                      <option value="Haiti">Haiti</option>
+                      <option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+                      <option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                      <option value="Honduras">Honduras</option>
+                      <option value="Hong Kong">Hong Kong</option>
+                      <option value="Hungary">Hungary</option>
+                      <option value="Iceland">Iceland</option>
+                      <option value="India">India</option>
+                      <option value="Indonesia">Indonesia</option>
+                      <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                      <option value="Iraq">Iraq</option>
+                      <option value="Ireland">Ireland</option>
+                      <option value="Isle of Man">Isle of Man</option>
+                      <option value="Israel">Israel</option>
+                      <option value="Italy">Italy</option>
+                      <option value="Jamaica">Jamaica</option>
+                      <option value="Japan">Japan</option>
+                      <option value="Jersey">Jersey</option>
+                      <option value="Jordan">Jordan</option>
+                      <option value="Kazakhstan">Kazakhstan</option>
+                      <option value="Kenya">Kenya</option>
+                      <option value="Kiribati">Kiribati</option>
+                      <option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                      <option value="Korea, Republic of">Korea, Republic of</option>
+                      <option value="Kuwait">Kuwait</option>
+                      <option value="Kyrgyzstan">Kyrgyzstan</option>
+                      <option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                      <option value="Latvia">Latvia</option>
+                      <option value="Lebanon">Lebanon</option>
+                      <option value="Lesotho">Lesotho</option>
+                      <option value="Liberia">Liberia</option>
+                      <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                      <option value="Liechtenstein">Liechtenstein</option>
+                      <option value="Lithuania">Lithuania</option>
+                      <option value="Luxembourg">Luxembourg</option>
+                      <option value="Macao">Macao</option>
+                      <option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+                      <option value="Madagascar">Madagascar</option>
+                      <option value="Malawi">Malawi</option>
+                      <option value="Malaysia">Malaysia</option>
+                      <option value="Maldives">Maldives</option>
+                      <option value="Mali">Mali</option>
+                      <option value="Malta">Malta</option>
+                      <option value="Marshall Islands">Marshall Islands</option>
+                      <option value="Martinique">Martinique</option>
+                      <option value="Mauritania">Mauritania</option>
+                      <option value="Mauritius">Mauritius</option>
+                      <option value="Mayotte">Mayotte</option>
+                      <option value="Mexico">Mexico</option>
+                      <option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                      <option value="Moldova, Republic of">Moldova, Republic of</option>
+                      <option value="Monaco">Monaco</option>
+                      <option value="Mongolia">Mongolia</option>
+                      <option value="Montenegro">Montenegro</option>
+                      <option value="Montserrat">Montserrat</option>
+                      <option value="Morocco">Morocco</option>
+                      <option value="Mozambique">Mozambique</option>
+                      <option value="Myanmar">Myanmar</option>
+                      <option value="Namibia">Namibia</option>
+                      <option value="Nauru">Nauru</option>
+                      <option value="Nepal">Nepal</option>
+                      <option value="Netherlands">Netherlands</option>
+                      <option value="Netherlands Antilles">Netherlands Antilles</option>
+                      <option value="New Caledonia">New Caledonia</option>
+                      <option value="New Zealand">New Zealand</option>
+                      <option value="Nicaragua">Nicaragua</option>
+                      <option value="Niger">Niger</option>
+                      <option value="Nigeria">Nigeria</option>
+                      <option value="Niue">Niue</option>
+                      <option value="Norfolk Island">Norfolk Island</option>
+                      <option value="Northern Mariana Islands">Northern Mariana Islands</option>
+                      <option value="Norway">Norway</option>
+                      <option value="Oman">Oman</option>
+                      <option value="Pakistan">Pakistan</option>
+                      <option value="Palau">Palau</option>
+                      <option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+                      <option value="Panama">Panama</option>
+                      <option value="Papua New Guinea">Papua New Guinea</option>
+                      <option value="Paraguay">Paraguay</option>
+                      <option value="Peru">Peru</option>
+                      <option value="Philippines">Philippines</option>
+                      <option value="Pitcairn">Pitcairn</option>
+                      <option value="Poland">Poland</option>
+                      <option value="Portugal">Portugal</option>
+                      <option value="Puerto Rico">Puerto Rico</option>
+                      <option value="Qatar">Qatar</option>
+                      <option value="Reunion">Reunion</option>
+                      <option value="Romania">Romania</option>
+                      <option value="Russian Federation">Russian Federation</option>
+                      <option value="Rwanda">Rwanda</option>
+                      <option value="Saint Helena">Saint Helena</option>
+                      <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                      <option value="Saint Lucia">Saint Lucia</option>
+                      <option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                      <option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+                      <option value="Samoa">Samoa</option>
+                      <option value="San Marino">San Marino</option>
+                      <option value="Sao Tome and Principe">Sao Tome and Principe</option>
+                      <option value="Saudi Arabia">Saudi Arabia</option>
+                      <option value="Senegal">Senegal</option>
+                      <option value="Serbia">Serbia</option>
+                      <option value="Seychelles">Seychelles</option>
+                      <option value="Sierra Leone">Sierra Leone</option>
+                      <option value="Singapore">Singapore</option>
+                      <option value="Slovakia">Slovakia</option>
+                      <option value="Slovenia">Slovenia</option>
+                      <option value="Solomon Islands">Solomon Islands</option>
+                      <option value="Somalia">Somalia</option>
+                      <option value="South Africa">South Africa</option>
+                      <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+                      <option value="Spain">Spain</option>
+                      <option value="Sri Lanka">Sri Lanka</option>
+                      <option value="Sudan">Sudan</option>
+                      <option value="Suriname">Suriname</option>
+                      <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                      <option value="Swaziland">Swaziland</option>
+                      <option value="Sweden">Sweden</option>
+                      <option value="Switzerland">Switzerland</option>
+                      <option value="Syrian Arab Republic">Syrian Arab Republic</option>
+                      <option value="Taiwan">Taiwan</option>
+                      <option value="Tajikistan">Tajikistan</option>
+                      <option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                      <option value="Thailand">Thailand</option>
+                      <option value="Timor-leste">Timor-leste</option>
+                      <option value="Togo">Togo</option>
+                      <option value="Tokelau">Tokelau</option>
+                      <option value="Tonga">Tonga</option>
+                      <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                      <option value="Tunisia">Tunisia</option>
+                      <option value="Turkey">Turkey</option>
+                      <option value="Turkmenistan">Turkmenistan</option>
+                      <option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                      <option value="Tuvalu">Tuvalu</option>
+                      <option value="Uganda">Uganda</option>
+                      <option value="Ukraine">Ukraine</option>
+                      <option value="United Arab Emirates">United Arab Emirates</option>
+                      <option value="United Kingdom">United Kingdom</option>
+                      <option value="United States">United States</option>
+                      <option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                      <option value="Uruguay">Uruguay</option>
+                      <option value="Uzbekistan">Uzbekistan</option>
+                      <option value="Vanuatu">Vanuatu</option>
+                      <option value="Venezuela">Venezuela</option>
+                      <option value="Viet Nam">Viet Nam</option>
+                      <option value="Virgin Islands, British">Virgin Islands, British</option>
+                      <option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                      <option value="Wallis and Futuna">Wallis and Futuna</option>
+                      <option value="Western Sahara">Western Sahara</option>
+                      <option value="Yemen">Yemen</option>
+                      <option value="Zambia">Zambia</option>
+                      <option value="Zimbabwe">Zimbabwe</option>
+                  </select>
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                
+                <div class="row twoCol stay">
+                  <div class="register-input">
+                    <label for="contestantBirthDay">Date of Birth (Optional)</label>
+                    <input id="contestantBirthDay" type="date" />
+                    <div class="register-error-message"></div>
+                  </div>
+                  <div class="register-input">
+                    <label for="contestantGradDate">Grad Date (Optional)</label>
+                    <input id="contestantGradDate" type="date" />
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                <div class="row oneCol resumeRow">
+                  <div>
+                    <label for="contestantResume">Upload PDF Resume (required)</label>
+                    <input
+                      id="contestantResume"
+                      type="file"
+                      accept=".pdf"
+                    />
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+                <div class="row mlh-terms">
+                  <div class="check">
+                    <input type="checkbox" id="discord-check">
+                    <label for="discord-check">I am planning or have joined the <a href="https://discord.com/invite/fzk2zRuZQq" target="_blank">TigerHacks Discord</a>.</label>
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" id="terms-check">
+                    <label for="terms-check">I have read and agreed to the <a href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a>.</label>
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" id="share-check">
+                    <label for="share-check">I authorize you to share my application/registration information with Major League Hacking for event administration, ranking, and MLH administration in-line with the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further agree to the terms of both the <a href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md" target="_blank">MLH Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>.</label>
+                  </div>
+                  <div class="check">
+                    <input type="checkbox" class="check-box-error" id="email-check">
+                    <label for="email-check">I authorize MLH to send me pre- and post-event informational emails, which contain free credit and opportunities from their partners.</label>
+                  </div>
+                  <p class="register-error-message" id="mlh-error"></p>
+                  
+                </div>
+                <div class="row oneCol bottom-row">
+                  
+                  <div class="submit-btn">
+                    <button type="submit" id="sumbitFirebaseButton">SUBMIT</button>
+                    <div class="register-error-message"></div>
+                  </div>
+                </div>
+              </div>
+              <div id="success-container">
+                  <h1>Thanks for signing up for Tiger Hacks</h1>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="fixed-info">
+        <div class="scroll-banner">
+          <p>Scroll up or down</p>
+          <span class="material-symbols-outlined" id="mouse-icon">mouse</span>
+        </div>
+
+        <div class="register-btn">
+          <button onClick="scrollBottom()">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+    <script src="./jquery-csv.js"></script>
+    <script src="./firebaseForm.js"></script>
+  </body>
+</html>

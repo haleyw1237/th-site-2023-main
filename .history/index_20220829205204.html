@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>TigerHacks</title>
+    <link rel="icon" type="image/png" href="pictures/tiger.png" />
+    <!-- Bootstrap Things -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- Javascript Things -->
+    <script src="https://kit.fontawesome.com/aa4307182f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery.visible.js"></script>
+    <!-- <script type="text/javascript" src="stars.js"></script> -->
+    <!-- Import stylesheet from .css file -->
+    <link rel="stylesheet" href="main.css">
+    <script>
+        function isSecure() {
+            return window.location.protocol == 'https:';
+        }
+        /* Uncomment this when website is up! */
+        /*
+        if (!isSecure()) {
+            window.location.replace("https://tigerhacks.com");
+        }
+        */
+       
+
+    </script>
+</head>
+
+<body class="preload">
+    <!--
+    <div id="mobileHeader">
+        <p>Mobile view still actively being worked on. Sorry for inconvenience!</p>
+    </div>
+    -->
+
+
+    <!-- New Background! -->
+    <div class='starss'></div>
+    <div class='twinkling'></div>
+
+    <a id="mlh-trust-badge"
+        href="https://mlh.io/seasons/2022/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2022-season&utm_content=white"
+        target="_blank">
+        <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2022/mlh-trust-badge-2022-white.svg"
+            alt="Major League Hacking 2022 Hackathon Season" style="width: 100%;" />
+    </a>
+
+    <!-- Old MLH 
+    <a id="mlh-trust-badge"
+        href="https://mlh.io/seasons/2021/events?utm_source=na-hackathon&utm_medium=TrustBadge&utm_campaign=2021-season&utm_content=white"
+        target="_blank"><img
+            src="https://s3.amazonaws.com/logged-assets/trust-badge/2021/mlh-trust-badge-2021-white.svg"
+            alt="Major League Hacking 2021 Hackathon Season" style="width:100%"></a>
+    -->
+    <nav>
+        <a href="#faq_section" id="faq_link">FAQ</a>
+        <a href="#schedule_section" id="schedule_link">Schedule</a>
+        <a href="#prizes_section" id="prizes_link">Prizes</a>
+        <a href="#sponsors_section" id="sponsors_link">Sponsors</a>
+    </nav>
+    <!--
+    <div id="stars">
+        <div class="star small"></div>
+        <div class="star medium"></div>
+        <div class="star big"></div>
+    </div>
+-->
+
+    <div id="test">
+        <div id="invisible">
+            <img class="rocket1" src="pictures/rocket1.png">
+            <img class="rocket2" src="pictures/rocket2.png">
+        </div>
+    </div>
+
+
+    <div id="QR">
+        <center>
+            <!-- QR Code Section for Discord - Make sure to change this each year -->
+            <a href="https://discord.gg/fzk2zRuZQq">
+                <img class="QR" src="pictures/QR_Code.png" alt="Come join the Discord!"
+                    alt="https://discord.gg/fzk2zRuZQq" />
+            </a>
+        </center>
+        <h4 class="orange">Come join us!</h4>
+    </div>
+
+    <!-- The main page and square when people enter the website -->
+    <div id="landing">
+        <img class="logo" src="pictures/tiger.png" />
+        <h4 class="orange">Tiger</h4>
+        <h4>Hacks</h4>
+        <h1 id="date">Nov 5-7 2021</h1>
+        <h1 id="location">Lafferre Hall and Virtually</h1>
+
+        <!-- <button type="button" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#regModal"
+            id="register-button" onclick="showReg()">Register now!</button> -->
+        <div id="social-container" class="row">
+            <a href="mailto:tigerhackshd@gmail.com" target="_blank"><i class="fa fa-2x fa-envelope-square"
+                    aria-hidden="true"></i></a>
+            <a href="https://twitter.com/tigerhackshd" target="_blank"><i class="fa fa-2x fa-twitter-square"
+                    aria-hidden="true"></i></a>
+            <a href="http://facebook.com/tigerhacks" target="_blank"><i class="fa fa-2x fa-facebook-square"
+                    aria-hidden="true"></i></a>
+            <a href="https://instagram.com/tigerhacks" target="_blank"><i class="fa fa-2x fa-instagram"
+                    aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <!-- Registration form section-->
+    <div class="modal fade " id="regModal" data-keyboard="false" tabindex="-1" aria-labelledby="regModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="regModalLabel">TigerHacks Registration</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="registration-form">
+                        <form id="reg-form" name="regForm" onsubmit="return submitRegistration();">
+                            <div class="form-group">
+                                <label for="first_name">First Name</label>
+                                <input type="text" class="form-control" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" class="form-control" name="last_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">School Email Address</label>
+                                <input type="email" class="form-control" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone_number">Phone Number</label>
+                                <input type="text" class="form-control" name="phone_number" id="phone"
+                                    placeholder="#-(###) ###-####" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="school_list">School</label>
+                                <input class="form-control" list="dropdownSchool" name="school" required>
+                                <datalist id="dropdownSchool" name="school_list" required>
+
+                                </datalist>
+                            </div>
+                            <div class="form-group">
+                                <label for="grade_level">Current Level of Study</label>
+                                <select name="grade_level" class="form-control" required>
+                                    <option disabled selected> </option>
+                                    <option>High School</option>
+                                    <option>Undergraduate / Bachelors</option>
+                                    <option>Graduate / Masters</option>
+
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender (Optional)</label>
+                                <input type="text" class="form-control" name="gender">
+                            </div>
+                            <div class="form-group">
+                                <label for="shirt_size">Shirt Size</label>
+                                <select name="shirt_size" class="form-control" required>
+                                    <option disabled selected> </option>
+                                    <option>XS</option>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                    <option>2XL</option>
+                                    <option>3XL</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="major">Major</label>
+                                <input name="major" type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="resume">Please Submit Resume <a href="https://forms.gle/1tR1aEfPt8wjZEEm8"
+                                        target="_blank">Here</a></label>
+                                <select name="resume" class="form-control" id="resume" required>
+                                    <option disabled selected> </option>
+                                    <option>Submitted</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="attend_status">Would you like to attend Virtually or In-Person at Lafferre
+                                    Hall?</label>
+                                <select name="attend_status" class="form-control" id="attendance" required>
+                                    <option disabled selected> </option>
+                                    <option>Virtually</option>
+                                    <option>In-Person</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="mailing">
+                                <label for="mailing_address">Mailing Address (Optional)</label>
+                                <input name="mailing_address" type="text" class="form-control"
+                                    placeholder="So we can send you swag!">
+                            </div>
+                            <div class="form-group">
+                                <label for="birthdate">Date of Birth (Optional)</label>
+                                <input name="birthdate" type="text" class="form-control" placeholder="MM-DD-YYYY">
+                            </div>
+                            <div class="form-group">
+                                <label for="dietary_restrictions">Dietary Restrictions (Optional)</label>
+                                <input name="dietary_restrictions" type="text" class="form-control"
+                                    placeholder="Ex. Vegan">
+                            </div>
+                            <div class="form-group">
+                                <label for="graduation_year">Month and Year of Graduation (Optional)</label>
+                                <input name="graduation_year" type="text" class="form-control"
+                                    placeholder="Ex. May 2022">
+                            </div>
+                            <div class="form-group form-check">
+                                <label><input type="checkbox" class="form-check-input" required>
+                                    I am planning or have joined the <a href="https://discord.gg/fzk2zRuZQq"
+                                        target="_blank">TigerHacks Discord</a>.</label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label><input type="checkbox" class="form-check-input" required>
+                                    I have read and agreed to the <a href="http://mlh.io/code-of-conduct"
+                                        target="_blank">MLH Code of Conduct</a>.</label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label><input type="checkbox" class="form-check-input" required>I authorize you to
+                                    share my application/registration information with Major League Hacking for event
+                                    administration, ranking, and MLH administration in-line with the <a
+                                        href="https://mlh.io/privacy" target="_blank">MLH Privacy Policy</a>. I further
+                                    agree to the terms of both the <a target="_blank"
+                                        href="https://github.com/MLH/mlh-policies/blob/master/prize-terms-and-conditions/contest-terms.md">MLH
+                                        Contest Terms and Conditions</a> and the <a href="https://mlh.io/privacy"
+                                        target="_blank">MLH
+                                        Privacy Policy</a>.</label>
+                            </div>
+                            <div class="form-group form-check">
+                                <label><input type="checkbox" class="form-check-input" required>
+                                    I authorize MLH to send me pre- and post-event informational emails, which contain
+                                    free credit and opportunities from their partners.</label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div id="registration-feedback">
+                        <p style="color:white;" id="reg-notif">Registration was successful!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--- FAQ Section -->
+    <h1 class="section-header" id="faq_section">Frequently Asked Questions</h1>
+
+    <div class="accordion section">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                        data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        What happens at a hackathon?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faq_section">
+                <div class="card-body">
+                    Participants ("hackers") spend 36 hours working in small teams to build or code or design projects
+                    ("hacks")
+                    that they're excited about. There are workshops, mentors, food, and swag, to guide you along
+                    the way. You bring your ideas, and we give you everything you need to make them come to life. This
+                    year, TigerHacks is hybrid, allowing both virtual and in-person participants.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        How many people are on a team?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faq_section">
+                <div class="card-body">
+                    We are requiring that you have no more than 4 people on a team. In other words, teams can range 
+                    from 1 - 4 individuals. 
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        What do people normally make?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq_section">
+                <div class="card-body">
+                    Any number of things: web development, Android, iOS, AI/ML, AR/VR, game development, or hardware.
+                    Whatever interests you most is likely to yield the best results :)
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Do I have to know how to code to attend?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq_section">
+                <div class="card-body">
+                    Nope! We will have lots of resources including workshops and a sweet mentorship system to help
+                    beginners get started. We will also dedicate one room to new hackers and have several project ideas to help you
+                    get started.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Who runs TigerHacks?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faq_section">
+                <div class="card-body">
+                    TigerHacks is organized and hosted by a group of dedicated and passionate young nerds, who are
+                    members of the Mizzou Computing Association at the University of Missouri.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        What about COVID?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faq_section">
+                <div class="card-body">
+                    The University of Missouri currently has no mask mandate, but we plan to remain masked up at events where social distancing will be difficult and ask that you do the same!
+                    When working with your team in a space socially distanced from others, you are free to make the decision for yourself.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingEight">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                        Where do I register my team?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#faq_section">
+                <div class="card-body">
+                    Registration opens up at 5 PM CDT on November 5th on <a style="color:red"
+                        href="https://th21.devpost.com/">th21.devpost.com</a>! If you need a team, you can find individuals 
+                        on the Discord or DevPost, or we help you form a team.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingNine">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                        What can virtual participants view?
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#faq_section">
+                <div class="card-body">
+                    We plan to have a live feed and recording of the Opening Ceremony, Brainstorming Session, Tech Talks, Movie Night, How To Demo, and the Closing Ceremony.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="headingSeven">
+                <h2 class="mb-0">
+                    <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                        data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        I didn't find my question here...
+                    </button>
+                </h2>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faq_section">
+                <div class="card-body">
+                    If you've got something else on your mind, send it our way at tigerhackshd@gmail.com! Additionally, 
+                    feel free to message any member of the Planning Committee on Discord. 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Slogan section for current year's slogan -->
+    <div>
+        <h1 id="slogan"><i class="fas fa-angle-double-down"></i> Ready for a space odyssey <i
+                class="fas fa-angle-double-down"></i></h1>
+    </div>
+    <div id="earth">
+    </div>
+    <div id="schedule-bg">
+        <!-- Schedule Section -->
+        <h1 class="section-header" id="schedule_section">Schedule</h1>
+        <div class="schedule section">
+            <div class="row">
+                <div class="col">
+                    <h3>FRIDAY</h3>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                Check-In Begins
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Hall 5:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Opening Ceremony
+                            </h4>
+                            <p class="card-text">
+                                Ketcham Auditorium 6:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule secondcolor">
+                        <div class="card-title">
+                            <h4>
+                                Competition Begins
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Hall 6:30 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                Dinner (Noodles & Co.)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 7:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Brainstorming and Team-Building
+                            </h4>
+                            <p class="card-text">
+                                Ketcham Auditorium 8:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule secondcolor">
+                        <div class="card-title">
+                            <h4>
+                                Panera Tech Talk: Pygame
+                            </h4>
+                            <p class="card-text">
+                                Ketcham Auditorium 9:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                Movie Night: TBD
+                            </h4>
+                            <p class="card-text">
+                                Ketcham Auditorium 10:30 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Midnight Snack (Domino's + Cookies)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 12:00 AM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>SATURDAY</h3>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                Breakfast (Panera Bagels)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 8:00 AM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Jackbox and Board Games - Naka
+                            </h4>
+                            <p class="card-text">
+                                Naka Auditorium 10:00 AM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule secondcolor">
+                        <div class="card-title">
+                            <h4>
+                                Lunch (Jimmy Johns)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 12:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                Panera Tech Talk: Working in IT
+                            </h4>
+                            <p class="card-text">
+                                Naka Auditorium 1:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Outdoor Games w/Mizzou CAPB
+                            </h4>
+                            <p class="card-text">
+                                Peace Park 2:00 PM 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule secondcolor">
+                        <div class="card-title">
+                            <h4>
+                                US Airforce Challenge w/MLH
+                            </h4>
+                            <p class="card-text">
+                                Virtual 4:00 PM 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                !Light w/MLH
+                            </h4>
+                            <p class="card-text">
+                                Virtual 4:30 PM 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Dinner (Smoke & Fire + China Kitchen)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 7:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule secondcolor">
+                        <div class="card-title">
+                            <h4>
+                                Cup Stacking w/Panera
+                            </h4>
+                            <p class="card-text">
+                                Ketcham Main Hallway 8:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                VR Games w/MU VR
+                            </h4>
+                            <p class="card-text">
+                                Ketcham Auditorium 9:00 PM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Midnight Snack (Insomnia Cookies)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 12:00 AM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>SUNDAY</h3>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                Breakfast (Schnucks' Donuts)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 8:00 AM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                How to Demo
+                            </h4>
+                            <p class="card-text">
+                                Ketcham/Virtual 9:30 AM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule secondcolor">
+                        <div class="card-title">
+                            <h4>
+                                Submissions Due on DevPost
+                            </h4>
+                            <p class="card-text">
+                                10:30 AM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule">
+                        <div class="card-title">
+                            <h4>
+                                Lunch (Pizza Tree)
+                            </h4>
+                            <p class="card-text">
+                                Lafferre Time Capsule 11:00 AM
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-schedule firstcolor">
+                        <div class="card-title">
+                            <h4>
+                                Judging Begins
+                            </h4>
+                            <p class="card-text">
+                                Virtual 12:00 PM
+                            </p>
+                        </div>  
+                    </div>
+                    <div class="card-schedule secondcolor">
+                        <div class="card-title">
+                            <h4>
+                                Closing Ceremony
+                            </h4>
+                            <p class="card-text">
+                                Ketcham Auditorium 2:00 PM
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="backg">
+        <div class="planet">
+            <div class="r1"></div>
+            <div class="r2"></div>
+            <div class="r3"></div>
+            <div class="r4"></div>
+            <div class="r5"></div>
+            <div class="r6"></div>
+            <div class="r7"></div>
+            <div class="r8"></div>
+            <div class="shad"></div>
+        </div>
+
+        <div class="an">
+            <div class="tank"></div>
+            <div class="astro">
+
+                <div class="helmet">
+                    <div class="glass">
+                        <div class="shine"></div>
+                    </div>
+                </div>
+                <div class="dress">
+                    <div class="c">
+                        <div class="btn1"></div>
+                        <div class="btn2"></div>
+                        <div class="btn3"></div>
+                        <div class="btn4"></div>
+                    </div>
+                </div>
+                <div class="handl">
+                    <div class="handl1">
+                        <div class="glovel">
+                            <div class="thumbl"></div>
+                            <div class="b2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="handr">
+                    <div class="handr1">
+                        <div class="glover">
+                            <div class="thumbr"></div>
+                            <div class="b1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="legl">
+                    <div class="bootl1">
+                        <div class="bootl2"></div>
+                    </div>
+                </div>
+                <div class="legr">
+                    <div class="bootr1">
+                        <div class="bootr2"></div>
+                    </div>
+                </div>
+                <div class="pipe">
+                    <div class="pipe2">
+                        <div class="pipe3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="wrap">
+        <div id="alien">
+            <div class="body">
+                <div class="eyes left"></div>
+                <div class="eyes right"></div>
+                <div class="mouse"></div>
+            </div>
+            <div class="arms left"></div>
+            <div class="arms right"></div>
+            <div class="legs left"></div>
+            <div class="legs right"></div>
+            <div class="halo-set">
+                <div class="halo"></div>
+                <div class="halo"></div>
+                <div class="halo"></div>
+                <div class="halo"></div>
+                <div class="halo"></div>
+            </div>
+        </div>
+    </div>
+    <!--  Prizes Section -->
+    <div id="prizes-bg">
+        <div id="background-wrap">
+        </div>
+        <h1 class="section-header" id="prizes_section">Prizes</h1>
+        <div class="section">
+            <div class="section-wrapper">
+                <div class="container">
+                    <h2>Developer</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h3>First</h3>
+                            <p>Oculus Quest 2</p>
+                        </div>
+                        <div class="col-sm">
+                            <h3>Second</h3>
+                            <p>Bluetooth Projector</p>
+                        </div>
+                        <div class="col-sm">
+                            <h3>Third</h3>
+                            <p>Floating Moon Lamp</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h2>Beginner</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h3>First</h3>
+                            <p>Logitech Mouse</p>
+                        </div>
+                        <div class="col-sm">
+                            <h3>Second</h3>
+                            <p>Rocketbook Notebook</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h2>Startup</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h3>First</h3>
+                            <p>Tile Tags</p>
+                        </div>
+                        <div class="col-sm">
+                            <h3>Second</h3>
+                            <p>Portable Bluetooth Speaker</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h2>Most Impactful Hack</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h3>First</h3>
+                            <p>Midland Walkie Talkie Radios</p>
+                        </div>
+                        <div class="col-sm">
+                            <h3>Second</h3>
+                            <p>Raspberry Pis + TradeBot Mystery Bag</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <h2>Female Hack</h2>
+                    <div class="row">
+                        <div class="col-sm">
+                            <h3>First</h3>
+                            <p>FujiFilm Photo Printer + Film</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h2>Panera's Freshest Idea</h2>
+                            <h3>Winner</h3>
+                            <p>$100 Panera Gift Cards + Interview</p>
+                        </div>
+                        <div class="col-sm">
+                            <h2>Shelter's Logo Challenge</h2>
+                            <h3>Winner</h3>
+                            <p>First: $100 Amazon Gift Card</p>
+                            <p>Second: $50 Amazon Gift Card</p>
+                            <p>Third: $25 Amazon Gift Card</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm">
+                            <h2>Items to Be Raffled</h2>
+                            <p>1x Inspiron 15 Laptop</p>
+                            <p>1x Razer BlackWidow V3 Pro Mechanical Wireless Gaming Keyboard</p>
+                            <p>3x 1-Year Licenses of Axure RP Team Edition</p>
+                            <p>4x American Jazz Museum Tickets</p>
+                            <p>12x Andy's Frozen Custard Sundae</p>
+                            <p>1x Raising Cane's Gift Basket</p>
+                        </div>
+                    </div>
+                    <hr>
+                <p>For info on this year's sponsors and prizes, visit <a
+                        href="https://th21.devpost.com/">th21.devpost.com</a>!
+                </p>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="sponsors-bg">
+        <!-- Red Solar System-->
+        <section id="solar-system">
+            <div id="sun"></div>
+            <article id="mercury-trajectory">
+                <div id="mercury"></div>
+            </article>
+            <article id="venus-trajectory">
+                <div id="venus"></div>
+            </article>
+            <article id="earth-trajectory">
+                <div id="earth"></div>
+            </article>
+            <article id="mars-trajectory">
+                <div id="mars"></div>
+            </article>
+        </section>
+
+        <h1 class="section-header" id="sponsors_section">Sponsors</h1>
+        <div class="section">
+            <div class="platinum-sponsor">
+                <div class="row">
+                    <a target="_blank" href="https://www.panerabread.com/en-us/home.html"><img
+                            src="pictures/sponsors/panera.png"></a>
+                </div>
+            </div>
+            <div class="gold-sponsor">
+                <div class="row">
+                </div>
+            </div>
+            <div class="silver-sponsor">
+                <div class="row">
+                    <a target="_blank" href="https://www.veteransunited.com/"><img src="pictures/sponsors/vu.png"></a>
+                    <a target="_blank" href="https://www.tradebot.com/"><img src="pictures/sponsors/tradebot.png"></a>
+                    <a target="_blank" href="https://www.shelterinsurance.com/"><img
+                            src="pictures/sponsors/shelter.png"></a>
+                </div>
+                <div class="row">
+                    <a target="_blank" href="" style="opacity: 0;"><img src=""></a>
+                    <a target="_blank" href="https://nourish.schnucks.com/eatwell/"><img
+                            src="pictures/sponsors/eatwell.png"></a>
+                    <a target="_blank" href="" style="opacity: 0;"><img src=""></a>
+                </div>
+            </div>
+            <div class="bronze-sponsor">
+                <div class="row">
+                    <a target="_blank" href="https://www.linode.com/"><img src="pictures/sponsors/linode.png"></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/jennifer-hardester-073837128/"><img
+                            src="pictures/sponsors/stlmedlaw.png"></a>
+                    <a target="_blank" href="https://www.softwaredesignpartners.com/"><img
+                            src="pictures/sponsors/sdp.png"></a>
+                </div>
+
+            </div>
+            <h1>Partners</h1>
+            <div class="bronze-sponsor">
+                <div class="row">
+                    <!-- <a target="_blank" href="" style="opacity: 0;"><img src=""></a> (Use to fill empty spot)-->
+                    <a target="_blank" href="https://insomniacookies.com/"><img
+                            src="pictures/sponsors/insomniacookies.png"></a>
+                    <a target="_blank" href="https://midlandusa.com/"><img src="pictures/sponsors/midlandradio.png"></a>
+                    <a target="_blank" href="https://www.stickergiant.com/"><img
+                            src="pictures/sponsors/stickergiant.png"></a>
+                </div>
+                <div class="row">
+                    <a target="_blank" href="https://www.stickermule.com/"><img
+                            src="pictures/sponsors/stickermule.png"></a>
+                    <a target="_blank" href="https://www.themizzoustore.com/"><img
+                            src="pictures/sponsors/mizzoustore.png"></a>
+                    <a target="_blank" href="https://americanjazzmuseum.org/"><img
+                            src="pictures/sponsors/ajm.png"></a>
+                </div>
+                <div class="row">
+                    <a target="_blank" href="" style="opacity: 0;"><img src=""></a>
+                    <a target="_blank" href="https://www.dell.com/en-us"><img src="pictures/sponsors/dell.png"></a>
+                    <a target="_blank" href="" style="opacity: 0;"><img src=""></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            //Document.ready function that hides the mailing label, and then will show the mailing address label if user selects virtual
+            $(document).ready(function () {
+                $('#mailing').hide();
+                setTimeout(function () {
+                    document.getElementById('invisible').style.visibility = 'visible';
+                }, 2000);
+                $("#attendance").change(function () {
+                    if ($(this).val() == "In-Person") {
+                        $('#mailing').hide();
+                    } else {
+                        $('#mailing').show();
+                    }
+                });
+            });
+            $.get("schools.json",
+                function (data, error) {
+                    if (error) {
+                        console.log(error);
+                    }
+                    var options = data.dataTest;
+                    /* Something to "explode" by. See link. */
+                    for (school in options) {
+                        $("#dropdownSchool").append('<option value="' + options[school].school + '">' + '</option>');
+                    }
+                });
+
+            sections = ["faq", "schedule", "prizes", "sponsors"]
+            $(window).scroll(function () {
+                for (i in sections) {
+                    name = sections[i]
+                    if ($("#" + name + "_section").visible(true)) {
+                        $("#" + name + "_link").removeClass("nav-inactive");
+                        $("#" + name + "_link").addClass("nav-active");
+                    } else {
+                        if ($("#" + name + "_link").hasClass("nav-active")) {
+                            $("#" + name + "_link").removeClass("nav-active");
+                            $("#" + name + "_link").addClass("nav-inactive");
+                        }
+                    }
+                }
+            });
+
+            function error() {
+                $('#reg-notif').html('An error occurred submitting your registration. Please contact us at tigerhackshd@gmail.com for assistance');
+                $('#reg-notif').show();
+                $('#registration-form').hide();
+            }
+
+            function sanitize(string) {
+                return string.replaceAll("&", "_").replaceAll("?", "_").replaceAll("#", "number_").replaceAll("\'", "apost_");
+            }
+
+            function submitRegistration() {
+
+                var $inputs = $('form[name="regForm"] :input');
+
+                var reg = {};
+                $inputs.each(function () {
+                    reg[this.name] = sanitize($(this).val());
+                });
+
+                $.ajax({
+                    url: "submit.php",
+                    data: JSON.stringify(reg),
+                    crossDomain: true,
+                    contentType: "application/json",
+                    dataType: "json",
+                    type: "GET",
+                    success: function (data) {
+                        if (data['error']) {
+                            error();
+                        } else {
+                            $('#reg-notif').html('Registration was successful!');
+                            $('#reg-notif').show();
+                            $('#registration-form').hide();
+                        }
+                    },
+                    error: function (errMsg) {
+                        error();
+                    }
+                });
+                return false;
+            };
+
+            (function ($) {
+                $(document).ready(function () {
+                    $("nav").hide();
+                    $(function () {
+                        $(window).scroll(function () {
+                            if ($(this).scrollTop() > 600) {
+                                $('nav').fadeIn();
+                                $('#mlh-trust-badge').fadeOut();
+                            } else {
+                                $('nav').fadeOut();
+                                $('#mlh-trust-badge').fadeIn();
+                            }
+                        });
+
+
+                    });
+
+                });
+            }(jQuery));
+
+            if ($(window).width() < 800) {
+                $('#mobileHeader').show();
+            }
+            else {
+                $('#mobileHeader').hide();
+            }
+
+            function showReg() {
+                $('#reg-notif').hide();
+                document.getElementById('reg-form').reset();
+                $('#registration-form').show();
+            }
+
+        </script>
+        <script>
+            function phone_formatting(ele, restore) {
+                var new_number,
+                    selection_start = ele.selectionStart,
+                    selection_end = ele.selectionEnd,
+                    number = ele.value.replace(/\D/g, '');
+
+                if (number.length > 2) {
+                    new_number = number.substring(0, 3) + '-';
+                    if (number.length === 4 || number.length === 5) {
+                        new_number += number.substr(3);
+                    }
+                    else if (number.length > 5) {
+                        new_number += number.substring(3, 6) + '-';
+                    }
+                    if (number.length > 6) {
+                        new_number += number.substring(6);
+                    }
+                }
+                else {
+                    new_number = number;
+                }
+
+                ele.value = (new_number.length > 12) ? new_number.substring(0, 12) : new_number;
+
+                if (new_number.slice(-1) === '-' && restore === false
+                    && (new_number.length === 8 && selection_end === 7)
+                    || (new_number.length === 4 && selection_end === 3)) {
+                    selection_start = new_number.length;
+                    selection_end = new_number.length;
+                }
+                else if (restore === 'revert') {
+                    selection_start--;
+                    selection_end--;
+                }
+                ele.setSelectionRange(selection_start, selection_end);
+
+            }
+
+        // document.getElementById('phone').onkeyup = function (e) {
+        //     phone_number_check(this, e);
+        // }
+        </script>
+        <h4 style="font-size:18pt"><a href="https://mlh.io/code-of-conduct" target="_blank" style="color:white;"> MLH
+                Code of Conduct</a></h4>
+</body>
+
+</html>
