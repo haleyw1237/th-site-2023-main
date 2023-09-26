@@ -4,59 +4,72 @@
     padding: 20px;
   }
 
-  .faq-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30%;
-    height: 200px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    perspective: 1000px;
-  }
+.faq-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  perspective: 1000px;
+}
 
-  .faq-card-front {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-    transition: transform 0.5s;
-  }
+.faq-card-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(0deg);
+  transition: transform 0.5s;
+}
 
-  .faq-card-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-    transition: transform 0.5s;
-  }
+.faq-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.5s;
+}
 
-  .faq-card:hover .faq-card-front {
-    transform: rotateY(180deg);
-  }
+.faq-card:hover .faq-card-front {
+  transform: rotateY(180deg);
+}
 
-  .faq-card:hover .faq-card-back {
-    transform: rotateY(0deg);
-  }
+.faq-card:hover .faq-card-back {
+  transform: rotateY(0deg);
+}
 
-  .faq-card-front h4,
-  .faq-card-back p {
-    text-align: center;
-  }
+.faq-card-front h4,
+.faq-card-back p {
+  text-align: center;
+}
 
-  /* Position the FAQ cards in three columns */
-  .faq-section .faq-card {
-    float: left;
-  }
+/* Position the FAQ cards in three columns */
+.faq-section .faq-card {
+  float: left;
+}
 
-  /* Adjust the margin between the cards */
-  .faq-section .faq-card + .faq-card {
-    margin-left: 10px;
-  }
+/* Adjust the margin between the cards */
+.faq-section .faq-card + .faq-card {
+  margin-left: 10px;
+}
+
+
+.faq-card-diag-1 {
+  background-color: #e9ed10;
+}
+
+.faq-card-diag-2 {
+  background-color: #372dee;
+}
+
+.faq-card-diag-3 {
+  background-color: #9e0df1;
+}
