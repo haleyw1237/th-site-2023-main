@@ -1,76 +1,34 @@
 .night {
-    background-image: linear-gradient(#b1123a, var(--dark-blue));
+/*    background-image: linear-gradient(#b1123a, #484349);*/
+  background-color: #484349;
     position: relative;
     z-index: 2;
     overflow: hidden;
     width: 7000px;
 }
 
-.train-container {
-  position: fixed;
-  height: 400px;
-  width: 400px;
-  bottom: 40px;
-  left: -40%;
-  transition: left 1.5s ease;
-  transform: scaleX(-1);
-  z-index: 4;
-  filter: sepia(20%);
+.night h3 {
+  display: inline;
 }
 
-.train {
-    height: 400px;
-    width: 400px;
+.night .sched-date > p {
+  display: inline;
 }
 
-.train-wheel {
-  height: 84px;
-  position: absolute;
-}
-
-#wheel1 {
-  bottom: 15px;
-  left: 140px;
-}
-#wheel2 {
-  bottom: 15px;
-  left: 224px;
-}
-
-.buildings-container {
-  /* background-image: url("../assets/buildings.png"); */
-  height: 220px;
-  position: fixed;
-  bottom: 215px;
-  width: 5440px;
-  background-repeat: repeat-x;
-  z-index: 2;
-  
-}
-
-.train-tracks {
-  background-image: url("../assets/trainTracks.png");
-  z-index: 3;
-  height: 650px;
-  position: absolute;
-  bottom: -130px;
-  width: 100%;
-  background-repeat: repeat-x;
-}
-
-#stars {
-  position: fixed;
-  z-index: 0;
-  height: 100vh;
+.schedule-prizes-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .sched-container {
   position: absolute;
-  top: 3vh;
+  top: 50vh;
   left: 50px;
+  height: 50vh;
   color: white;
   font-family: 'Eurostile', sans-serif;
   display: flex;
+  flex-direction: column;
 }
 
 
@@ -85,17 +43,14 @@
 .sched-row {
   display: flex;
   margin-bottom: 5vh;
+/*  height: 35%;*/
+  flex-grow: 1;
 }
 
 .sched-row > * {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
+  background-color: rgba(0, 0, 0, 0.3);
   border-top: 1px solid rgb(86, 86, 86);
   padding: 10px;
-}
-
-.sched-date {
-  width: 250px;
-  text-align: center;
 }
 
 .sched-date h3 {
@@ -106,7 +61,6 @@
   font-size: 1.5rem;
 }
 
-
 .sched-event h4 {
   font-size: 1.2rem;
 }
@@ -114,10 +68,16 @@
 .sched-event {
   font-family: 'Inter', sans-serif;
   display: table;
-  margin-left: 20px;
+/*  margin-left: 20px;*/
   padding: 0 10px;
   max-width: 296px;
+  width: 296px;
 }
+
+.sched-event ~ .sched-event {
+  margin-left: 20px;
+}
+
 .sched-event p {
   font-size: 0.8rem;
 }
@@ -132,8 +92,16 @@
   font-family: 'EurostileBold', sans-serif;
 }
 
-.sunday, .friday {
-  color: var(--yellow);
+.sunday {
+  color: #F4D06F;
+}
+
+.saturday {
+  color: #EF946C;
+}
+
+.friday {
+  color: #84C0C6;
 }
 
 .side-hacks {
@@ -188,7 +156,7 @@
 
 .prizes-container {
   position: absolute;
-  left: 2850px;
+  left: 50px;
   top: 5vh;
   display: flex;
   height: 260px;
@@ -273,19 +241,21 @@
 }
 
 @media screen and (max-height: 930px) {
+  .sched-container {
+/*    top: 50vh;*/
+  }
   .sched-row {
     margin-bottom: 2vh;
   }
   #sched-title {
     font-size: 2.3em;
   }
-  
 }
 
 @media screen and (max-height: 780px){
   .sched-container {
     transform: scale(0.8);
-    top: 0;
+/*    top: 50vh;*/
     left: 50px;
   }
   #sched-title {
@@ -294,42 +264,4 @@
   .sched-row {
     margin-bottom: 5px;
   }
-  .train-container {
-    bottom: 5px;
-  }
-  .buildings-container {
-    bottom: 175px;
-  }
-  .train-tracks {
-    bottom: -170px;
-  }
-  .buildings-container img {
-    height: 100px;
-  }
-  .buildings-container {
-    bottom: 59px;
-  }
-}
-
-@media screen and (max-width: 750px){
-  .train {
-    width: 100%;
-    height: 100%;
-  }
-  .train-container {
-    width: 250px;
-    height: 250px;
-  }
-  .train-wheel {
-    height: 52px;
-  }
-  #wheel1 {
-    left:85px;
-    bottom: 10px;
-  }
-  #wheel2 {
-    left: 140px;
-    bottom: 10px;
-  }
-  
 }

@@ -5,32 +5,6 @@
     width: 6500px;
 }
 
-#ocean-background {
-  height: 100%;
-  width: 100%;
-  background-image: url("../assets/blue-overlay.png");
-  position: absolute;
-}
-
-#sand-image {
-  position:absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-#submarinePng {
-  display: none;
-}
-
-#submarine, #submarinePng {
-  width: 36vh;
-  position: fixed;
-  left: 200px;
-  bottom: 1vh;
-  opacity: 0;
-  z-index: 99;
-}
-
 #sponsors-title {
   color: white;
   text-orientation:upright;
@@ -43,7 +17,7 @@
   position: relative;
 }
 
-#testing {
+.insta-post {
   border-radius: 5px;
   border-color: silver;
   border-style: solid;
@@ -52,7 +26,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 5%;
+  width: 25vw;
+  position: relative;
 }
 
 .insta {
@@ -115,34 +90,6 @@ a.insta {
   left: 200px;
 }
 
-.sponsors .tier a {
-  position: absolute;
-}
-
-.sponsor {
-  transition: all 0.5s ease;
-}
-
-.sponsor:hover{
-  transform: scale(1.1);
-}
-
-.sponsors .tier img{
-  max-width: 25vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.sponsors .gold .sponsor {
-  background-image: url("../assets/goldbubble.png");
-  background-size: contain;
-  width: 35vh;
-  height: 35vh;
-  position: relative;
-}
-
 .bronze {
   position: relative;
   left: 2150px;
@@ -156,26 +103,6 @@ a.insta {
 .gold {
   position: relative;
   left: 0;
-}
-
-.bronze a {
-  height: 22vh;
-}
-
-.sponsors .silver .sponsor {
-  background-image: url("../assets/silverbubble.png");
-  background-size: contain;
-  width: 25vh;
-  height: 25vh;
-  position: relative;
-}
-
-.sponsors .bronze .sponsor {
-  background-image: url("../assets/bronzebubble.png");
-  background-size: contain;
-  width: 16vh;
-  height: 16vh;
-  position: relative;
 }
 
 .black-shadow {
@@ -216,28 +143,20 @@ a.insta {
   transform: translate(-3px, -3px);
 }
 
-#hr {top: 10vh; left: 0;}
 #panera {top: 30vh; left: 400px;}
+#wwt {top: 0vh; left: 0px;}
 
-#shamrock {top: 45vh; left: 400px;}
-#shelter {top: 15vh; left: 370px;}
-#enterprise {top: 12vh; left: 720px;}
+#shelter {top: 15vh; left: 310px;}
+
 #central {top: 41vh; left: 740px;}
-#muit {top: 38vh; left: 40px;}
-#lp {top: 10vh; left: 0px;}
-
 #sdp {top: 14vh; left: 520px;}
 #vu {top: 48vh; left: 330px;}
 #tradebot {top: 17vh; left: 70px;}
-#kcfed {top: 38vh; left: 600px;}
+#enterprise {top: 12vh; left: 720px;}
 #commerce {top: 40vh; left: 40px;}
-#cei {top: 28vh; left: 300px;}
+#garmin {top: 0vh; left: 0px;}
+#cfe {top: 0vh; left: 0px;}
 
-#midland {top: 26vh; left: 40px;}
-#hotbox {top: 37vh; left: 160px;}
-#stickergiant {top: 47vh;}
-#axure {top: 22vh; left: 250px;}
-#andys {top: 45vh; left: 300px;}
 
 
 
