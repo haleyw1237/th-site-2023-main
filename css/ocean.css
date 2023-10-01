@@ -1,7 +1,7 @@
 .ocean {
     position: relative;
     z-index: 5;
-    background-color: white;
+    background-color: var(--dark-purple);
     width: 6500px;
 }
 
@@ -11,23 +11,33 @@
   writing-mode: vertical-lr;
   font-size: calc(2.3em + 1vh);
   margin-right: 200px;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
   margin-top: 10vh;
   padding: 5px;
   position: relative;
 }
 
 .insta-post {
-  border-radius: 5px;
-  border-color: silver;
-  border-style: solid;
-  border-width: 10px;
   background-color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 25vw;
   position: relative;
+}
+
+.gold .insta-post {
+  border-radius: 5px;
+  border-color: gold;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.silver .insta-post {
+  border-radius: 5px;
+  border-color: silver;
+  border-style: solid;
+  border-width: 10px;
 }
 
 .insta {
@@ -39,6 +49,10 @@
 a.insta {
   color: black;
   text-decoration: none;
+}
+
+a.dark {
+  background: #444444;
 }
 
 .insta-top {
@@ -64,6 +78,10 @@ a.insta {
   border-radius: 50%;
   overflow: hidden;
   margin: 5px 5px 5px 0px;
+}
+
+.insta-logo img {
+  width: 32px;
 }
 
 .insta-body {
@@ -143,7 +161,7 @@ a.insta {
   transform: translate(-3px, -3px);
 }
 
-#panera {top: 30vh; left: 400px;}
+#panera {top: 40vh; left: -100px;}
 #wwt {top: 0vh; left: 0px;}
 
 #shelter {top: 15vh; left: 310px;}
@@ -196,7 +214,7 @@ a.insta {
   position: relative;
   top: 3vh;
   color: white;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
   padding: 5px;
   font-size: 2.6vh;
 }

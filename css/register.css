@@ -14,14 +14,14 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  position: sticky;
+  position: absolute;
   left: 0;
 }
 
 .register-link {
   width: 100vw;
   height: 100vh;
-  position: sticky;
+  position: absolute;
   left: 0;
   display: none;
 }

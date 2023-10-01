@@ -7,6 +7,7 @@ var isMobile = false;
 
 // position for when the plane starts fading away to transition to next section
 
+let currentPrizeID = 0;
 
 // this code will run when DOM is loaded
 $(function () {
@@ -26,12 +27,70 @@ $(function () {
 
   scrollHeight = changeScrollHeight()
   $("#page").css({ height: scrollHeight });
+
+  let prizeCategories = document.getElementsByClassName("category");
+  let prevButtons = document.getElementsByClassName("prev-category");
+  for(let node of prevButtons) {
+    node.addEventListener("click", function(e) {
+      prizeCategories[currentPrizeID].style = "opacity: 0;";
+      currentPrizeID--;
+      if(currentPrizeID < 0) currentPrizeID += prizeCategories.length;
+      prizeCategories[currentPrizeID].style = "opacity: 1;";
+    });
+  }
+  let nextButtons = document.getElementsByClassName("next-category");
+  for(let node of nextButtons) {
+    node.addEventListener("click", function(e) {
+      prizeCategories[currentPrizeID].style = "opacity: 0;";
+      currentPrizeID = (currentPrizeID + 1) % prizeCategories.length;
+      prizeCategories[currentPrizeID].style = "opacity: 1;";
+    });
+  }
+
+  let schedScrollPos = {"friday": 0, "saturday": 0, "sunday": 0};
+  let scrollCounts = {"friday": 4, "saturday": 6, "sunday": 3};
+  let prevSchedButtons = document.getElementsByClassName("prev-schedule");
+  for(let node of prevSchedButtons) {
+    node.addEventListener("click", function(e) {
+      let events = this.parentElement.getElementsByClassName("sched-event-container")[0];
+      let nextButton = this.parentElement.getElementsByClassName("next-schedule")[0];
+      nextButton.style = "";
+      schedScrollPos[events.id] -= 316;
+      if(schedScrollPos[events.id] === 0) {
+        this.style = "display: none;";
+      }
+      events.style = `left: -${schedScrollPos[events.id]}px;`;
+    });
+    node.style = "display: none;";
+  }
+
+  let nextSchedButtons = document.getElementsByClassName("next-schedule");
+  for(let node of nextSchedButtons) {
+    node.addEventListener("click", function(e) {
+      let events = this.parentElement.getElementsByClassName("sched-event-container")[0];
+      let prevButton = this.parentElement.getElementsByClassName("prev-schedule")[0];
+      prevButton.style = "";
+      schedScrollPos[events.id] += 316;
+      console.log(events);
+      console.log(events.id);
+      console.log(schedScrollPos[events.id]);
+      if(schedScrollPos[events.id] === scrollCounts[events.id] * 316) {
+        this.style = "display: none;";
+      }
+      events.style = `left: -${schedScrollPos[events.id]}px;`;
+    });
+  }
+
+  // $(".schedule-prizes-container").css({ width: document.body.clientWidth + "px"});
+  // $(".night").css({ width: (document.body.clientWidth + 1000) + "px"});
 });
 
 addEventListener('resize', (event) => {
   getPositionValues()
   scrollHeight = changeScrollHeight()
   $("#page").css({ height: scrollHeight });
+  // $(".schedule-prizes-container").css({ width: document.body.clientWidth + "px"});
+  // $(".night").css({ width: (document.body.clientWidth + 1000) + "px"});
   switchToButton()
 });
 
@@ -52,7 +111,13 @@ addEventListener('touchstart', (event) => {
 })
 
 function changeScrollHeight() {
-  return window.innerWidth*2 + 450 + 2500 + 7000 + 7000  
+  return window.innerWidth + 2500 + // faq
+         150 + // divider
+         window.innerWidth + 1000 + // "netflix"
+         150 + // divider
+         6500 + // sponsors/committee
+         150 + // divider
+         window.innerHeight // initial height of the webpage
 }
 
 function switchToMobile() {
@@ -201,6 +266,18 @@ function shift(position) {
   $("#stars").css({left: position/30})
   $(".buildings-container").css({left: 700+position/7})
   $(".divider").css({ left: position });
+
+  let schedStickyStart = -4570 + 1894 - $(window).width();
+  let schedStickyEnd = -5570 + 1894 - $(window).width();
+  let schedPosition;
+  if(position < schedStickyStart && position > schedStickyEnd) {
+    schedPosition = schedStickyStart - position;
+  } else if(position < schedStickyEnd) {
+    schedPosition = schedStickyStart - schedStickyEnd;
+  } else {
+    schedPosition = 0;
+  }
+  $(".schedule-prizes-container").css({ left: schedPosition});
 
   // move clouds to the left, but at a slow rate, based on their size.
   $(".clouds-container .sm").css({ left: -position / 1.2 });
