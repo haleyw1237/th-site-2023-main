@@ -22,22 +22,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25vw;
+  width: 15vw;
   position: relative;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 10px;
 }
 
 .gold .insta-post {
-  border-radius: 5px;
   border-color: gold;
-  border-style: solid;
-  border-width: 10px;
 }
 
 .silver .insta-post {
-  border-radius: 5px;
   border-color: silver;
-  border-style: solid;
-  border-width: 10px;
+}
+
+.bronze .insta-post {
+  border-color: rgb(203, 140, 76);
 }
 
 .insta {
@@ -110,12 +111,12 @@ a.dark {
 
 .bronze {
   position: relative;
-  left: 2150px;
+  left: 1300px;
 }
 
 .silver {
   position: relative;
-  left: 1000px;
+  left: 500px;
 }
 
 .gold {
@@ -162,18 +163,18 @@ a.dark {
 }
 
 #panera {top: 40vh; left: -100px;}
-#wwt {top: 0vh; left: 0px;}
+#wwt {top: -5vh; left: 550px;}
 
-#shelter {top: 15vh; left: 310px;}
+#shelter {top: 15vh; left: 340px;}
 
-#central {top: 41vh; left: 740px;}
-#sdp {top: 14vh; left: 520px;}
-#vu {top: 48vh; left: 330px;}
-#tradebot {top: 17vh; left: 70px;}
-#enterprise {top: 12vh; left: 720px;}
-#commerce {top: 40vh; left: 40px;}
-#garmin {top: 0vh; left: 0px;}
-#cfe {top: 0vh; left: 0px;}
+#central {top: 40vh; left: -300px;}
+#sdp {top: -20vh; left: 120px;}
+#vu {top: -40vh; left: 500px;}
+#tradebot {top: -100vh; left: 900px;}
+#enterprise {top: -160vh; left: 1270px;}
+#commerce {top: -180vh; left: 1700px;}
+#garmin {top: -255vh; left: 2100px;}
+#cfe {top: -250vh; left: 2280px;}
 
 
 
@@ -202,7 +203,7 @@ a.dark {
 .committee {
   position: absolute;
   top: 0;
-  left: 4300px;
+  left: 5000px;
   width: 200px;
   height: 200px;
 }
@@ -253,7 +254,7 @@ a.dark {
 
 .member .title {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-  color: var(--dark-blue);
+  color: white;
   letter-spacing: 2px;
   font-size: 1.3vh;
 }

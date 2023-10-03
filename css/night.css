@@ -1,6 +1,6 @@
 .night {
 /*    background-image: linear-gradient(#b1123a, #484349);*/
-  background-color: #484349;
+  background-color: var(--dark-purple);
     position: relative;
     z-index: 2;
     overflow: hidden;
