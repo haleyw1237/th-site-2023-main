@@ -7,6 +7,10 @@ var isMobile = false;
 
 // position for when the plane starts fading away to transition to next section
 
+let currentPrizeID = 0;
+let schedScrollPos = {"friday": 0, "saturday": 0, "sunday": 0};
+let scrollCounts = {"friday": 4, "saturday": 6, "sunday": 3};
+let netflixScrollID;
 
 // this code will run when DOM is loaded
 $(function () {
@@ -26,12 +30,90 @@ $(function () {
 
   scrollHeight = changeScrollHeight()
   $("#page").css({ height: scrollHeight });
+
+  let prizeCategories = document.getElementsByClassName("category");
+  let prevButtons = document.getElementsByClassName("prev-category");
+  for(let node of prevButtons) {
+    node.addEventListener("click", function(e) {
+      clearInterval(netflixScrollID);
+      prizeCategories[currentPrizeID].style = "opacity: 0;";
+      currentPrizeID--;
+      if(currentPrizeID < 0) currentPrizeID += prizeCategories.length;
+      prizeCategories[currentPrizeID].style = "opacity: 1;";
+    });
+  }
+  let nextButtons = document.getElementsByClassName("next-category");
+  for(let node of nextButtons) {
+    node.addEventListener("click", function(e) {
+      clearInterval(netflixScrollID);
+      prizeCategories[currentPrizeID].style = "opacity: 0;";
+      currentPrizeID = (currentPrizeID + 1) % prizeCategories.length;
+      prizeCategories[currentPrizeID].style = "opacity: 1;";
+    });
+  }
+
+  netflixScrollID = setInterval(function() {
+    prizeCategories[currentPrizeID].style = "opacity: 0;";
+    currentPrizeID = (currentPrizeID + 1) % prizeCategories.length;
+    prizeCategories[currentPrizeID].style = "opacity: 1;";
+  }, 10000);
+
+  let prevSchedButtons = document.getElementsByClassName("prev-schedule");
+  for(let node of prevSchedButtons) {
+    node.addEventListener("click", function(e) {
+      let events = this.parentElement.getElementsByClassName("sched-event-container")[0];
+      let nextButton = this.parentElement.getElementsByClassName("next-schedule")[0];
+      let maxEventsOnScreen = Math.ceil(document.body.clientWidth / 316);
+      schedScrollPos[events.id] -= 316;
+      if(schedScrollPos[events.id] < (scrollCounts[events.id] + Math.max(0, 5 - maxEventsOnScreen)) * 316) {
+        nextButton.style = "";
+      }
+      if(schedScrollPos[events.id] === 0) {
+        this.style = "display: none;";
+      }
+      events.style = `left: -${schedScrollPos[events.id]}px;`;
+    });
+    node.style = "display: none;";
+  }
+
+  let nextSchedButtons = document.getElementsByClassName("next-schedule");
+  for(let node of nextSchedButtons) {
+    node.addEventListener("click", function(e) {
+      let events = this.parentElement.getElementsByClassName("sched-event-container")[0];
+      let prevButton = this.parentElement.getElementsByClassName("prev-schedule")[0];
+      prevButton.style = "";
+      schedScrollPos[events.id] += 316;
+      let maxEventsOnScreen = Math.ceil(document.body.clientWidth / 316);
+      if(schedScrollPos[events.id] >= (scrollCounts[events.id] + Math.max(0, 5 - maxEventsOnScreen)) * 316) {
+        this.style = "display: none;";
+      }
+      events.style = `left: -${schedScrollPos[events.id]}px;`;
+    });
+  }
+
+  let scrollBarWidth = window.innerWidth - document.body.clientWidth;
+  $(".schedule-prizes-container").css({ width: `calc(100vw - ${scrollBarWidth}px)`});
+  $(".night").css({ width: `calc(100vw - ${scrollBarWidth}px + 1000px)`});
+
 });
 
 addEventListener('resize', (event) => {
   getPositionValues()
   scrollHeight = changeScrollHeight()
   $("#page").css({ height: scrollHeight });
+  let maxEventsOnScreen = Math.ceil(document.body.clientWidth / 316);
+  let extraScrolls = Math.max(0, 5 - maxEventsOnScreen);
+  let nextSchedButtons = document.getElementsByClassName("next-schedule");
+  for(let node of nextSchedButtons) {
+    let events = node.parentElement.getElementsByClassName("sched-event-container")[0];
+    if(schedScrollPos[events.id] > (scrollCounts[events.id] + extraScrolls) * 316) {
+      node.style = "display: none;";
+      schedScrollPos[events.id] = 316 * (scrollCounts[events.id] + extraScrolls);
+      events.style = `left: -${schedScrollPos[events.id]}px`;
+    } else {
+      node.style = "";
+    }
+  }
   switchToButton()
 });
 
@@ -52,7 +134,13 @@ addEventListener('touchstart', (event) => {
 })
 
 function changeScrollHeight() {
-  return window.innerWidth*2 + 450 + 2500 + 7000 + 7000  
+  return window.innerWidth + 2500 + // faq
+         150 + // divider
+         document.body.clientWidth + 1000 + // "netflix"
+         150 + // divider
+         6500 + // sponsors/committee
+         150 + // divider
+         window.innerHeight // initial height of the webpage
 }
 
 function switchToMobile() {
@@ -201,6 +289,18 @@ function shift(position) {
   $("#stars").css({left: position/30})
   $(".buildings-container").css({left: 700+position/7})
   $(".divider").css({ left: position });
+
+  let schedStickyStart = -4570 + 1894 - $(window).width();
+  let schedStickyEnd = -5570 + 1894 - $(window).width();
+  let schedPosition;
+  if(position < schedStickyStart && position > schedStickyEnd) {
+    schedPosition = schedStickyStart - position;
+  } else if(position < schedStickyEnd) {
+    schedPosition = schedStickyStart - schedStickyEnd;
+  } else {
+    schedPosition = 0;
+  }
+  $(".schedule-prizes-container").css({ left: schedPosition});
 
   // move clouds to the left, but at a slow rate, based on their size.
   $(".clouds-container .sm").css({ left: -position / 1.2 });

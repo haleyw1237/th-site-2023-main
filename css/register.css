@@ -14,14 +14,14 @@
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  position: sticky;
+  position: absolute;
   left: 0;
 }
 
 .register-link {
   width: 100vw;
   height: 100vh;
-  position: sticky;
+  position: absolute;
   left: 0;
   display: none;
 }
@@ -45,7 +45,7 @@
   text-decoration: none;
   font-family: 'Eurostile', sans-serif;
   text-transform: uppercase;
-  background-color: var(--red);
+  background-color: var(--yellow);
   padding: 14px 22px 10px;
   font-size: 3vw;
   text-align: center;
@@ -54,7 +54,7 @@
   letter-spacing: 3px;
   border: 2px solid white;
   transition: all 0.2s ease;
-  cursor: default;
+/*  cursor: default;*/
 }
 
 .register-page-btn span {
@@ -62,11 +62,11 @@
   font-family: 'EurostileBold', sans-serif;
 }
 
-/* .register-page-btn:hover {
-  background-color: #ae2d29;
+ .register-page-btn:hover {
+  background-color: var(--orange);
   border: 5px solid white;
   transform: translate(-50%, -50%) scale(1.05);
-} */
+} 
 
 .art {
   position: absolute;

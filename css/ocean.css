@@ -1,34 +1,8 @@
 .ocean {
     position: relative;
     z-index: 5;
-    background-color: white;
+    background-color: var(--dark-purple);
     width: 6500px;
-}
-
-#ocean-background {
-  height: 100%;
-  width: 100%;
-  background-image: url("../assets/blue-overlay.png");
-  position: absolute;
-}
-
-#sand-image {
-  position:absolute;
-  bottom: 0;
-  width: 100%;
-}
-
-#submarinePng {
-  display: none;
-}
-
-#submarine, #submarinePng {
-  width: 36vh;
-  position: fixed;
-  left: 200px;
-  bottom: 1vh;
-  opacity: 0;
-  z-index: 99;
 }
 
 #sponsors-title {
@@ -37,10 +11,96 @@
   writing-mode: vertical-lr;
   font-size: calc(2.3em + 1vh);
   margin-right: 200px;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
   margin-top: 10vh;
   padding: 5px;
   position: relative;
+}
+
+.insta-post {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15vw;
+  position: relative;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 10px;
+}
+
+.gold .insta-post {
+  border-color: gold;
+}
+
+.silver .insta-post {
+  border-color: silver;
+}
+
+.bronze .insta-post {
+  border-color: rgb(203, 140, 76);
+}
+
+.insta {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+a.insta {
+  color: black;
+  text-decoration: none;
+}
+
+a.dark {
+  background: #444444;
+}
+
+.insta-top {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 7px 4px 7px 16px;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.insta-account {
+  font-weight: 600;
+  font-size: .875rem;
+}
+
+.insta-logo {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 5px 5px 5px 0px;
+}
+
+.insta-logo img {
+  width: 32px;
+}
+
+.insta-body {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: center;
+  padding: 14px 16px 14px 16px;
+  background-color: #eee;
+}
+
+.insta-body-image {
+  width: 100%;
+}
+
+.insta-caption {
+  width: 100%;
+  padding: 14px 4px 14px 16px;
 }
 
 .sponsors {
@@ -49,67 +109,19 @@
   left: 200px;
 }
 
-.sponsors .tier a {
-  position: absolute;
-}
-
-.sponsor {
-  transition: all 0.5s ease;
-}
-
-.sponsor:hover{
-  transform: scale(1.1);
-}
-
-.sponsors .tier img{
-  max-width: 25vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.sponsors .gold .sponsor {
-  background-image: url("../assets/goldbubble.png");
-  background-size: contain;
-  width: 35vh;
-  height: 35vh;
-  position: relative;
-}
-
 .bronze {
   position: relative;
-  left: 2150px;
+  left: 1300px;
 }
 
 .silver {
   position: relative;
-  left: 1000px;
+  left: 500px;
 }
 
 .gold {
   position: relative;
   left: 0;
-}
-
-.bronze a {
-  height: 22vh;
-}
-
-.sponsors .silver .sponsor {
-  background-image: url("../assets/silverbubble.png");
-  background-size: contain;
-  width: 25vh;
-  height: 25vh;
-  position: relative;
-}
-
-.sponsors .bronze .sponsor {
-  background-image: url("../assets/bronzebubble.png");
-  background-size: contain;
-  width: 16vh;
-  height: 16vh;
-  position: relative;
 }
 
 .black-shadow {
@@ -150,28 +162,20 @@
   transform: translate(-3px, -3px);
 }
 
-#hr {top: 10vh; left: 0;}
-#panera {top: 30vh; left: 400px;}
+#panera {top: 40vh; left: -100px;}
+#wwt {top: -5vh; left: 550px;}
 
-#shamrock {top: 45vh; left: 400px;}
-#shelter {top: 15vh; left: 370px;}
-#enterprise {top: 12vh; left: 720px;}
-#central {top: 41vh; left: 740px;}
-#muit {top: 38vh; left: 40px;}
-#lp {top: 10vh; left: 0px;}
+#shelter {top: 15vh; left: 340px;}
 
-#sdp {top: 14vh; left: 520px;}
-#vu {top: 48vh; left: 330px;}
-#tradebot {top: 17vh; left: 70px;}
-#kcfed {top: 38vh; left: 600px;}
-#commerce {top: 40vh; left: 40px;}
-#cei {top: 28vh; left: 300px;}
+#central {top: 40vh; left: -300px;}
+#sdp {top: -20vh; left: 120px;}
+#vu {top: -40vh; left: 500px;}
+#tradebot {top: -100vh; left: 900px;}
+#enterprise {top: -160vh; left: 1270px;}
+#commerce {top: -180vh; left: 1700px;}
+#garmin {top: -255vh; left: 2100px;}
+#cfe {top: -250vh; left: 2280px;}
 
-#midland {top: 26vh; left: 40px;}
-#hotbox {top: 37vh; left: 160px;}
-#stickergiant {top: 47vh;}
-#axure {top: 22vh; left: 250px;}
-#andys {top: 45vh; left: 300px;}
 
 
 
@@ -199,7 +203,7 @@
 .committee {
   position: absolute;
   top: 0;
-  left: 4300px;
+  left: 5000px;
   width: 200px;
   height: 200px;
 }
@@ -211,7 +215,7 @@
   position: relative;
   top: 3vh;
   color: white;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
   padding: 5px;
   font-size: 2.6vh;
 }
@@ -250,7 +254,7 @@
 
 .member .title {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-  color: var(--dark-blue);
+  color: white;
   letter-spacing: 2px;
   font-size: 1.3vh;
 }

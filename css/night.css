@@ -1,78 +1,53 @@
 .night {
-    background-image: linear-gradient(#b1123a, var(--dark-blue));
+/*    background-image: linear-gradient(#b1123a, #484349);*/
+  background-color: var(--dark-purple);
     position: relative;
     z-index: 2;
     overflow: hidden;
-    width: 7000px;
+    width: calc(100vw + 1000px);
 }
 
-.train-container {
-  position: fixed;
-  height: 400px;
-  width: 400px;
-  bottom: 40px;
-  left: -40%;
-  transition: left 1.5s ease;
-  transform: scaleX(-1);
-  z-index: 4;
-  filter: sepia(20%);
+.night h3 {
+  display: inline;
 }
 
-.train {
-    height: 400px;
-    width: 400px;
+.night .sched-date > p {
+  display: inline;
 }
 
-.train-wheel {
-  height: 84px;
+
+.schedule-prizes-container {
+  display: flex;
+  flex-direction: column;
+/*  padding: 5vh;*/
   position: absolute;
+  width: 100vw;
+  background-image: linear-gradient(90deg, #000000 30%, rgba(0, 0, 0, 0) 60%),
+                    linear-gradient(0deg, #000000 50%, rgba(0, 0, 0, 0) 60%);
+  height: 100%;
 }
 
-#wheel1 {
-  bottom: 15px;
-  left: 140px;
-}
-#wheel2 {
-  bottom: 15px;
-  left: 224px;
-}
-
-.buildings-container {
-  /* background-image: url("../assets/buildings.png"); */
-  height: 220px;
-  position: fixed;
-  bottom: 215px;
-  width: 5440px;
-  background-repeat: repeat-x;
-  z-index: 2;
-  
-}
-
-.train-tracks {
-  background-image: url("../assets/trainTracks.png");
-  z-index: 3;
-  height: 650px;
-  position: absolute;
-  bottom: -130px;
-  width: 100%;
-  background-repeat: repeat-x;
-}
-
-#stars {
-  position: fixed;
-  z-index: 0;
-  height: 100vh;
+.schedule-prizes-container button {
+  background: none;
+  color: white;
+  border: none;
 }
 
 .sched-container {
-  position: absolute;
-  top: 3vh;
-  left: 50px;
+  /*position: absolute;
+  top: 50vh;
+  left: 50px;*/
+  margin-top: 50vh;
+  height: 45vh;
   color: white;
   font-family: 'Eurostile', sans-serif;
   display: flex;
+  flex-direction: column;
+/*  display: none;*/
+  z-index: 3;
+  padding-left: 5vh;
+  width: 1000%;
 }
-
 
 #sched-title, #prize-title {
   text-orientation:upright;
@@ -84,18 +59,48 @@
 
 .sched-row {
   display: flex;
-  margin-bottom: 5vh;
+/*  margin-bottom: 5vh;*/
+  height: 10vh;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
-.sched-row > * {
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0));
-  border-top: 1px solid rgb(86, 86, 86);
-  padding: 10px;
+.sched-row .sched-event {
+  border: 1px solid rgb(86, 86, 86);
+  height: 10vh;
+/*  padding: 10px;*/
 }
 
-.sched-date {
-  width: 250px;
-  text-align: center;
+.sched-row .sched-mask {
+  background-image: linear-gradient(90deg, #000000, rgba(0, 0, 0, 0) 5% 90%, #000000);
+  position: absolute;
+  left: -5vw;
+  width: 105vw;
+  z-index: 4;
+}
+
+.sched-row button {
+  position: absolute;
+  z-index: 5;
+  height: 10vh;
+  width: 5vw;
+  font-size: 300%;
+}
+
+.sched-row .prev-schedule {
+  background-image: linear-gradient(90deg, #000000, rgba(0, 0, 0, 0));
+}
+
+.sched-row .next-schedule {
+  background-image: linear-gradient(270deg, #000000, rgba(0, 0, 0, 0));
+  right: 0;
+}
+
+.sched-event-container {
+  display: flex;
+  position: relative;
+  transition: left 0.5s;
+  left: 0;
 }
 
 .sched-date h3 {
@@ -106,7 +111,6 @@
   font-size: 1.5rem;
 }
 
-
 .sched-event h4 {
   font-size: 1.2rem;
 }
@@ -114,10 +118,16 @@
 .sched-event {
   font-family: 'Inter', sans-serif;
   display: table;
-  margin-left: 20px;
   padding: 0 10px;
   max-width: 296px;
+  width: 296px;
+  overflow: hidden;
 }
+
+.sched-event ~ .sched-event {
+  margin-left: 20px;
+}
+
 .sched-event p {
   font-size: 0.8rem;
 }
@@ -132,17 +142,137 @@
   font-family: 'EurostileBold', sans-serif;
 }
 
-.sunday, .friday {
+.sunday {
   color: var(--yellow);
 }
 
+.saturday {
+  color: var(--orange);
+}
+
+.friday {
+  color: var(--light-blue);
+}
+
 .side-hacks {
-  left: 5950px;
+  left: 3000px;
 }
 
 .mlh-categories {
-  left: 6450px;
+  left: 3000px;
 }
+
+.prizes-container {
+  position: absolute;
+  /*position: absolute;
+  left: 50px;
+  top: 5vh;*/
+  height: 100vh;
+  display: flex;
+  margin: 0vh;
+}
+
+#prize-title {
+  color: white;
+  font-size: 6vh;
+}
+
+.prev-category, .next-category {
+  position: absolute;
+  z-index: 3;
+  width: 5%;
+  height: 40%;
+  font-size: 400%;
+}
+
+.next-category {
+  right: 0%;
+}
+
+.category {
+/*  margin-right: 40px;*/
+/*  border: 1px solid rgba(255, 255, 255, 0.6);*/
+  font-family: 'Inter', sans-serif;
+  position: absolute;
+/*  border-radius: 10px;*/
+  width: 99vw;
+  height: 100%;
+  transition-duration: 1s;
+  transition-property: opacity;
+}
+
+.category .title {
+  background-color: white;
+  display: inline;
+  position: absolute;
+/*  border-radius: 5px;*/
+  padding: 7px;
+/*  letter-spacing: 2px;*/
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.places {
+  display: flex;
+  position: relative;
+}
+
+.places > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+
+.prize-info {
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0 40px;
+  
+}
+
+.prize-desc {
+  padding: 5%;
+  padding-right: 60%;
+  color: white;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+.prize-desc h3 {
+  font-size: 30px;
+}
+
+.prize-desc p {
+  margin-top: 100px;
+  color: #aaaaaa;
+  font-size: 20px;
+}
+
+.prize-image {
+  position: absolute;
+  left: 60%;
+  top: 0%;
+}
+
+.prize-image img {
+  z-index: 1;
+}
+
+.prize-info img {
+  width: 100%;
+}
+
 
 .modal-open {
   position: absolute; 
@@ -186,150 +316,30 @@
   background-color: var(--blue);
 }
 
-.prizes-container {
-  position: absolute;
-  left: 2850px;
-  top: 5vh;
-  display: flex;
-  height: 260px;
-}
 
-#prize-title {
-  color: white;
-  font-size: 6vh;
-}
-
-.category {
-  margin-right: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  font-family: 'Inter', sans-serif;
-  position: relative;
-  border-radius: 10px;
-}
-
-.category .title {
-  background-color: white;
-  display: inline;
-  position: absolute;
-  border-radius: 5px;
-  padding: 7px;
-  letter-spacing: 2px;
-  bottom: -17px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.places {
-  display: flex;
-  position: relative;
-}
-.places > * {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 260px;
-}
-.prize-info {
-  font-family: 'Inter', sans-serif;
-  text-align: center;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 0 40px;
-  
-}
-
-.prize-info img {
-  width: 100%;
-}
-
-.raffle {
-  background-color: rgba(167, 45, 41, 0.5);
-  box-shadow: 5px 5px 15px rgba(255, 255, 255, 0.1); 
-  padding: 20px;
-  font-size: 18px;
-  font-family: 'Inter', sans-serif; 
-  border-radius: 10px; 
-  text-align: center;
-  color: white;
-}
-
-.raffle h3 {
-  font-family: 'EurostileBold', sans-serif; 
-  text-transform: uppercase; 
-  font-size: 30px; 
-}
-
-.raffle ul {
-  list-style: none; 
-}
-
-.raffle li {
-  margin-top: 13px; 
-}
 
 @media screen and (max-height: 930px) {
+  .sched-container {
+/*    top: 50vh;*/
+  }
   .sched-row {
-    margin-bottom: 2vh;
+/*    margin-bottom: 2vh;*/
   }
   #sched-title {
     font-size: 2.3em;
   }
-  
 }
 
 @media screen and (max-height: 780px){
   .sched-container {
     transform: scale(0.8);
-    top: 0;
+/*    top: 50vh;*/
     left: 50px;
   }
   #sched-title {
     font-size: 2rem;
   }
   .sched-row {
-    margin-bottom: 5px;
+/*    margin-bottom: 5px;*/
   }
-  .train-container {
-    bottom: 5px;
-  }
-  .buildings-container {
-    bottom: 175px;
-  }
-  .train-tracks {
-    bottom: -170px;
-  }
-  .buildings-container img {
-    height: 100px;
-  }
-  .buildings-container {
-    bottom: 59px;
-  }
-}
-
-@media screen and (max-width: 750px){
-  .train {
-    width: 100%;
-    height: 100%;
-  }
-  .train-container {
-    width: 250px;
-    height: 250px;
-  }
-  .train-wheel {
-    height: 52px;
-  }
-  #wheel1 {
-    left:85px;
-    bottom: 10px;
-  }
-  #wheel2 {
-    left: 140px;
-    bottom: 10px;
-  }
-  
 }
