@@ -1,8 +1,21 @@
+#faq-div {
+  padding: 70px 0;
+}
+
+#faq-title {
+  background: white;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
 .faq-section {
     margin: 0 auto;
     max-width: 960px;
     padding: 20px;
-  }
+}
 
 .faq-card {
   display: flex;
