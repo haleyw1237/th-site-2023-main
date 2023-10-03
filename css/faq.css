@@ -22,7 +22,7 @@
     max-width: 960px;
     padding: 20px;
     position: absolute;
-    left: 1950px;
+    left: 100vw;
     width: calc(6000px - 100vw);
     height: 100%;
 }

@@ -2,7 +2,8 @@
     background-image: linear-gradient(#151718, var(--orange));
     overflow:hidden;
     z-index: 5;
-    width: calc(100vw + 1000px);
+    width: calc(400vw);
+    max-width: calc(960px + 100vw);
 }
 
 .plane-container {
