@@ -303,7 +303,7 @@ $(document).ready(function (){
         for(var i = 0; i < schools.length; i ++){
             const node = document.createElement("option");
             node.value = schools[i].school;
-            document.getElementById("schools").appendChild(node)
+            //document.getElementById("schools").appendChild(node)
         }
     });
     // $.getCSV("collegeMajors.csv", function(csvFile){
@@ -316,7 +316,7 @@ $(document).ready(function (){
             for(let j =0; j < data.length; j ++){
                 const major = document.createElement("option");
                 major.value = data[j][1];
-                document.getElementById("majorsList").appendChild(major)
+                //document.getElementById("majorsList").appendChild(major)
             }
         },
         dataType: "text",
