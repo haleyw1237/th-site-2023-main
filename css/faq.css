@@ -8,13 +8,39 @@
   text-align: center;
   font-size: 40px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  width: 96%;
+  height: 10%;
+  position: static;
+  font-family: 'Inter', sans-serif;
+  border-radius: 25px;
+  line-height: 80px;
 }
 
 .faq-section {
     margin: 0 auto;
     max-width: 960px;
     padding: 20px;
+    position: absolute;
+    left: 1950px;
+    width: calc(6000px - 100vw);
+    height: 100%;
+}
+
+.faq-title {
+  font-family: "Inter", sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  left: 30px;
+  display: inline-block;
+  width: 500px;
+  font-size: 2.5rem;
+  color: rgb(245, 239, 245);
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  letter-spacing: 8px;
+  text-align: center;
 }
 
 .faq-card {
@@ -76,13 +102,13 @@
 
 
 .faq-card-diag-1 {
-  background-color: #e9ed10;
+  background-color: var(--yellow);
 }
 
 .faq-card-diag-2 {
-  background-color: #372dee;
+  background-color: var(--light-blue);
 }
 
 .faq-card-diag-3 {
-  background-color: #9e0df1;
+  background-color: var(--purple);
 }

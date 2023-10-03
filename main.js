@@ -134,7 +134,7 @@ addEventListener('touchstart', (event) => {
 })
 
 function changeScrollHeight() {
-  return window.innerWidth + 2500 + // faq
+  return window.innerWidth + 1000 + // faq
          150 + // divider
          document.body.clientWidth + 1000 + // "netflix"
          150 + // divider
@@ -290,8 +290,8 @@ function shift(position) {
   $(".buildings-container").css({left: 700+position/7})
   $(".divider").css({ left: position });
 
-  let schedStickyStart = -4570 + 1894 - $(window).width();
-  let schedStickyEnd = -5570 + 1894 - $(window).width();
+  let schedStickyStart = -3070 + 1894 - $(window).width();
+  let schedStickyEnd = -4070 + 1894 - $(window).width();
   let schedPosition;
   if(position < schedStickyStart && position > schedStickyEnd) {
     schedPosition = schedStickyStart - position;
@@ -300,7 +300,7 @@ function shift(position) {
   } else {
     schedPosition = 0;
   }
-  $(".schedule-prizes-container").css({ left: schedPosition});
+  $(".schedule-prizes-container").css({ left: schedPosition });
 
   // move clouds to the left, but at a slow rate, based on their size.
   $(".clouds-container .sm").css({ left: -position / 1.2 });

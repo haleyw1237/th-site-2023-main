@@ -1,5 +1,5 @@
 .sky {
-    background-image: linear-gradient(#151718, var(--light-blue));
+    background-image: linear-gradient(#151718, var(--orange));
     overflow:hidden;
     z-index: 5;
     width: calc(100vw + 1000px);
@@ -34,7 +34,7 @@
     width: 100vw;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);
     z-index: 200;
-    font-family: "Cloud", sans-serif;
+    font-family: "Inter", sans-serif;
     color: white;
     letter-spacing: 8px;
 }
@@ -91,29 +91,6 @@
 
 .clouds-container img {
     position: relative;
-}
-
-.faq-section {
-    position: absolute;
-    left: 100vw;
-    width: calc(6000px - 100vw);
-    height: 100%;
-}
-
-.faq-title {
-  font-family: "Cloud", sans-serif;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 5;
-  left: 30px;
-  display: inline-block;
-  width: 500px;
-  font-size: 2.5rem;
-  color: rgb(245, 239, 245);
-  text-shadow: 0 0 10px rgba(0,0,0,0.7);
-  letter-spacing: 8px;
-  text-align: center;
 }
 
 @keyframes sway {
