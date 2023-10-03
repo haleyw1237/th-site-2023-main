@@ -35,6 +35,7 @@ $(function () {
   let prevButtons = document.getElementsByClassName("prev-category");
   for(let node of prevButtons) {
     node.addEventListener("click", function(e) {
+      clearInterval(netflixScrollID);
       prizeCategories[currentPrizeID].style = "opacity: 0;";
       currentPrizeID--;
       if(currentPrizeID < 0) currentPrizeID += prizeCategories.length;
@@ -44,6 +45,7 @@ $(function () {
   let nextButtons = document.getElementsByClassName("next-category");
   for(let node of nextButtons) {
     node.addEventListener("click", function(e) {
+      clearInterval(netflixScrollID);
       prizeCategories[currentPrizeID].style = "opacity: 0;";
       currentPrizeID = (currentPrizeID + 1) % prizeCategories.length;
       prizeCategories[currentPrizeID].style = "opacity: 1;";
@@ -51,7 +53,9 @@ $(function () {
   }
 
   netflixScrollID = setInterval(function() {
-    nextButtons[0].click();
+    prizeCategories[currentPrizeID].style = "opacity: 0;";
+    currentPrizeID = (currentPrizeID + 1) % prizeCategories.length;
+    prizeCategories[currentPrizeID].style = "opacity: 1;";
   }, 10000);
 
   let prevSchedButtons = document.getElementsByClassName("prev-schedule");
