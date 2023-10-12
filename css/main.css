@@ -186,6 +186,13 @@ html, body {
     z-index: 0;
 }
 
+.scroll-banner a {
+    text-decoration: none;
+    font-family: 'EurostileBold', sans-serif;
+    color: white;
+    font-size: 14px;
+}
+
 .scroll-banner p {
     width: 80px;
     font-size: 14px;

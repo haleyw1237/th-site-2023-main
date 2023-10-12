@@ -134,7 +134,7 @@ addEventListener('touchstart', (event) => {
 })
 
 function changeScrollHeight() {
-  return window.innerWidth + 1000 + // faq
+  return 3000 + // faq
          150 + // divider
          document.body.clientWidth + 1000 + // "netflix"
          150 + // divider
@@ -290,8 +290,8 @@ function shift(position) {
   $(".buildings-container").css({left: 700+position/7})
   $(".divider").css({ left: position });
 
-  let schedStickyStart = -3070 + 1894 - $(window).width();
-  let schedStickyEnd = -4070 + 1894 - $(window).width();
+  let schedStickyStart = -3150;
+  let schedStickyEnd = -4150;
   let schedPosition;
   if(position < schedStickyStart && position > schedStickyEnd) {
     schedPosition = schedStickyStart - position;
