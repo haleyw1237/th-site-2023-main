@@ -126,6 +126,11 @@
   display: flex;
 }
 
+.faq-card-back p a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
 .cloud-faq {
   height: 100%;
   width: 100%;

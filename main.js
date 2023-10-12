@@ -120,13 +120,13 @@ addEventListener('resize', (event) => {
 function switchToButton(){
   var height = window.innerHeight
   var width = window.innerWidth
-  if(height < 900 || width < 1000){
+  // if(height < 900 || width < 1000){
     $(".register-link").css({display: 'block'});
     $("#form-container").css({display: 'none'});
-  } else {
-    $(".register-link").css({display: 'none'});
-    $("#form-container").css({display: 'flex'});
-  }
+  // } else {
+  //   $(".register-link").css({display: 'none'});
+  //   $("#form-container").css({display: 'flex'});
+  // }
 }
 
 addEventListener('touchstart', (event) => {

@@ -110,16 +110,20 @@ a.dark {
 }
 
 .bronze {
+  display: flex;
+  align-items: flex-start;
   position: relative;
-  left: 1300px;
+  left: 950px;
 }
 
 .silver {
   position: relative;
-  left: 500px;
+  left: 200px;
 }
 
 .gold {
+  display: flex;
+  align-items: flex-start;
   position: relative;
   left: 0;
 }
@@ -163,18 +167,18 @@ a.dark {
 }
 
 #panera {top: 40vh; left: -100px;}
-#wwt {top: -5vh; left: 550px;}
+#wwt {top: 15vh; left: 300px;}
 
 #shelter {top: 15vh; left: 340px;}
 
 #central {top: 40vh; left: -300px;}
-#sdp {top: -20vh; left: 120px;}
-#vu {top: -40vh; left: 500px;}
-#tradebot {top: -100vh; left: 900px;}
-#enterprise {top: -160vh; left: 1270px;}
-#commerce {top: -180vh; left: 1700px;}
-#garmin {top: -255vh; left: 2100px;}
-#cfe {top: -250vh; left: 2280px;}
+#sdp {top: 20vh; left: -200px;}
+#vu {top: 25vh; left: -100px;}
+#tradebot {top: 30vh; left: 0px;}
+#enterprise {top: 10vh; left: 100px;}
+#commerce {top: 25vh; left: 200px;}
+#garmin {top: 15vh; left: 300px;}
+#cfe {top: 50vh; left: 400px;}
 
 
 
@@ -203,7 +207,7 @@ a.dark {
 .committee {
   position: absolute;
   top: 0;
-  left: 5000px;
+  left: 5260px;
   width: 200px;
   height: 200px;
 }

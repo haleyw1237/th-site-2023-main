@@ -270,12 +270,38 @@
 
 .prize-image {
   position: absolute;
-  left: 60%;
+  left: 55%;
   top: 0%;
+  width: 40%;
+}
+
+.developer .prize-image {
+  left: 55%;
+}
+
+.beginner .prize-image {
+  width: 35%;
+}
+
+.startup .prize-image {
+  left: 65%;
+  top: 1%;
+  width: 15%;
+}
+
+.crowd-vote .prize-image {
+  left: 65%;
+  top: 1%;
+  width: 18%;
+}
+
+.raffle .prize-image {
+  width: 35%;
 }
 
 .prize-image img {
   z-index: 1;
+  width: 100%;
 }
 
 .prize-info img {
