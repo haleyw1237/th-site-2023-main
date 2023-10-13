@@ -114,6 +114,9 @@ addEventListener('resize', (event) => {
       node.style = "";
     }
   }
+  let scrollBarWidth = window.innerWidth - document.body.clientWidth;
+  $(".schedule-prizes-container").css({ width: `calc(100vw - ${scrollBarWidth}px)`});
+  $(".night").css({ width: `calc(100vw - ${scrollBarWidth}px + 1000px)`});
   switchToButton()
 });
 
@@ -134,16 +137,23 @@ addEventListener('touchstart', (event) => {
 })
 
 function changeScrollHeight() {
-  return 3000 + // faq
+  if(isMobile) return 0;
+  return 1000 + window.innerWidth + // faq
          150 + // divider
          document.body.clientWidth + 1000 + // "netflix"
          150 + // divider
-         6500 + // sponsors/committee
+         window.innerWidth * 1.2 + 1000 + // sponsors
+         150 + // divider
+         window.innerWidth - 150 + //committee
          150 + // divider
          window.innerHeight // initial height of the webpage
 }
 
 function switchToMobile() {
+  isMobile = true;
+  document.getElementById("page").style = "";
+  document.getElementById("mobile-page").style = "";
+  document.getElementById("canvas").style = "display: none";
   $("#planeGif").css({display: 'none'});
   $("#planePng").css({display: 'block'});
   $("#submarine").css({display: 'none'});
@@ -290,8 +300,10 @@ function shift(position) {
   $(".buildings-container").css({left: 700+position/7})
   $(".divider").css({ left: position });
 
-  let schedStickyStart = -3150;
-  let schedStickyEnd = -4150;
+  let sky = document.getElementsByClassName("sky")[0];
+  let dividerDivWidth = 150;
+  let schedStickyStart = -sky.clientWidth - dividerDivWidth;
+  let schedStickyEnd = schedStickyStart - 1000;
   let schedPosition;
   if(position < schedStickyStart && position > schedStickyEnd) {
     schedPosition = schedStickyStart - position;

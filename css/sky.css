@@ -1,8 +1,8 @@
 .sky {
-    background-image: linear-gradient(#151718, var(--orange));
+    background-image: linear-gradient(#151718, var(--dark-purple));
     overflow:hidden;
     z-index: 5;
-    width: 3000px;
+    width: calc(1000px + 100vw);
 }
 
 .plane-container {
@@ -29,7 +29,7 @@
 
 .title-cloud {
     position: absolute;
-    top: 15%;
+/*    top: 15%;*/
     text-align: center;
     width: 100vw;
     text-shadow: 0 0 10px rgba(0,0,0,0.7);

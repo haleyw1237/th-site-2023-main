@@ -1,6 +1,6 @@
 
 .register {
-  background-color: var(--light-blue);
+  background-color: var(--dark-purple);
   font-family: "Inter", sans-serif;
   color: black;
   height: 100%;
@@ -41,7 +41,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: black;
   text-decoration: none;
   font-family: 'Eurostile', sans-serif;
   text-transform: uppercase;

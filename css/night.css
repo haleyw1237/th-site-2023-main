@@ -223,6 +223,11 @@
   z-index: 1;
 }
 
+.prize-desc p a {
+  text-decoration: none;
+  color: var(--purple);
+}
+
 .places {
   display: flex;
   position: relative;
@@ -263,9 +268,9 @@
 }
 
 .prize-desc p {
-  margin-top: 25px;
+/*  margin-top: 25px;*/
   color: #aaaaaa;
-  font-size: 20px;
+  font-size: 1em;
 }
 
 .prize-image {
@@ -353,7 +358,7 @@
 
 
 
-@media screen and (max-height: 930px) {
+@media screen and (max-height: 896px) {
   .sched-container {
 /*    top: 50vh;*/
   }
@@ -363,18 +368,24 @@
   #sched-title {
     font-size: 2.3em;
   }
+  .prize-desc p {
+    font-size: 1.2em;
+  }
 }
 
 @media screen and (max-height: 780px){
   .sched-container {
-    transform: scale(0.8);
+/*    transform: scale(0.8);*/
 /*    top: 50vh;*/
-    left: 50px;
+/*    left: 50px;*/
   }
   #sched-title {
     font-size: 2rem;
   }
   .sched-row {
 /*    margin-bottom: 5px;*/
+  }
+  .prize-desc p {
+    font-size: 0.9em;
   }
 }

@@ -1,0 +1,69 @@
+.plan-committee {
+  position: relative;
+  width: calc(100vw - 150px);
+  background-image: radial-gradient(circle 80vw at center, transparent 35%, black 40%),
+ 	url("../assets/theater_stage.jpeg");
+  background-color: var(--dark-purple);
+  background-size: contain;
+}
+
+.committee {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 5vh;
+  row-gap: 5vh;
+}
+
+.member {
+  margin: 0 00px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 24vh;
+  max-width: 270px;
+}
+
+.member p {
+  font-family: 'EurostileBold', sans-serif;
+  
+  text-transform: uppercase;
+}
+
+.member .name {
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 2.2vh;
+  color: var(--yellow);
+  letter-spacing: 2px;
+}
+
+.member .title {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.8vh;
+}
+
+.members .row {
+  display: flex;
+  justify-content:flex-start;
+  margin: 0 auto;
+}
+
+.members img {
+  height: 20vh;
+  width: 20vh;
+  max-width: 160px;
+  max-height: 160px;
+  border-radius: 150px;
+  margin-bottom: 15px;
+  border: 5px solid var(--yellow);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+}
