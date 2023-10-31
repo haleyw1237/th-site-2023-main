@@ -9,8 +9,11 @@ var isMobile = false;
 
 let currentPrizeID = 0;
 let schedScrollPos = {"friday": 0, "saturday": 0, "sunday": 0};
-let scrollCounts = {"friday": 4, "saturday": 6, "sunday": 3};
+let scrollCounts = {"friday": 0, "saturday": 0, "sunday": 0};
 let netflixScrollID;
+// let eventDescriptions = new Map([
+//   ["Title", "Description"],
+// ]);
 
 // this code will run when DOM is loaded
 $(function () {
@@ -58,6 +61,12 @@ $(function () {
     prizeCategories[currentPrizeID].style = "opacity: 1;";
   }, 10000);
 
+  for(let classes in scrollCounts) {
+    let row = document.getElementById(classes);
+    let numEvents = row.children.length;
+    scrollCounts[classes] = numEvents - 3;
+  }
+
   let prevSchedButtons = document.getElementsByClassName("prev-schedule");
   for(let node of prevSchedButtons) {
     node.addEventListener("click", function(e) {
@@ -95,6 +104,14 @@ $(function () {
   $(".schedule-prizes-container").css({ width: `calc(100vw - ${scrollBarWidth}px)`});
   $(".night").css({ width: `calc(100vw - ${scrollBarWidth}px + 1000px)`});
 
+
+  // let events = document.getElementsByClassName("sched-event");
+  // for(let node of events) {
+  //   node.addEventListener("click", function(e) {
+  //     console.log(e);
+  //     console.log(this);
+  //   });
+  // }
 });
 
 addEventListener('resize', (event) => {

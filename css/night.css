@@ -3,7 +3,7 @@
   background-color: var(--dark-purple);
     position: relative;
     z-index: 2;
-    overflow: hidden;
+/*    overflow: hidden;*/
     width: calc(100vw + 1000px);
 }
 
@@ -37,8 +37,8 @@
   /*position: absolute;
   top: 50vh;
   left: 50px;*/
-  margin-top: 50vh;
-  height: 45vh;
+  margin-top: 45vh;
+  height: 50vh;
   color: white;
   font-family: 'Eurostile', sans-serif;
   display: flex;
@@ -60,14 +60,15 @@
 .sched-row {
   display: flex;
 /*  margin-bottom: 5vh;*/
-  height: 10vh;
+/*  height: 10vh;*/
   flex-grow: 1;
-  overflow: hidden;
+  flex-shrink: 0;
+  overflow-x: hidden;
 }
 
 .sched-row .sched-event {
   border: 1px solid rgb(86, 86, 86);
-  height: 10vh;
+  height: 12vh;
 /*  padding: 10px;*/
 }
 
@@ -89,13 +90,11 @@
 
 .sched-row .prev-schedule {
   background-image: linear-gradient(90deg, #000000, rgba(0, 0, 0, 0));
-  display: none;
 }
 
 .sched-row .next-schedule {
   background-image: linear-gradient(270deg, #000000, rgba(0, 0, 0, 0));
   right: 0;
-  display: none;
 }
 
 .TBD {
@@ -109,11 +108,11 @@
   position: relative;
   transition: left 0.5s;
   left: 0;
-  display: none;
+/*  display: none;*/
 }
 
 .sched-date h3 {
-  font-size: 2.5rem;
+  font-size: 5vh;
 }
 
 .sched-date p {
@@ -130,7 +129,11 @@
   padding: 0 10px;
   max-width: 296px;
   width: 296px;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+.sched-event .small {
+  font-size: 1rem;
 }
 
 .sched-event ~ .sched-event {
@@ -256,6 +259,7 @@
 .prize-desc {
   padding: 5%;
   padding-right: 60%;
+  padding-top: 2%;
   color: white;
   height: 100%;
   width: 100%;
@@ -271,6 +275,10 @@
 /*  margin-top: 25px;*/
   color: #aaaaaa;
   font-size: 1em;
+}
+
+.panera-cat .prize-desc h3 {
+  font-size: 20px;
 }
 
 .prize-image {
@@ -298,6 +306,12 @@
   left: 65%;
   top: 1%;
   width: 18%;
+}
+
+.panera-cat .prize-image {
+  left: 60%;
+  top: 2%;
+  width: 30%;
 }
 
 .raffle .prize-image {
