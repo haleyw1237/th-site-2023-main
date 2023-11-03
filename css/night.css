@@ -83,7 +83,7 @@
 .sched-row button {
   position: absolute;
   z-index: 5;
-  height: 10vh;
+  height: 12vh;
   width: 5vw;
   font-size: 300%;
 }
@@ -142,6 +142,11 @@
 
 .sched-event p {
   font-size: 0.8rem;
+}
+
+.sched-event a {
+  text-decoration: none;
+  color: var(--purple);
 }
 
 .event-info {
